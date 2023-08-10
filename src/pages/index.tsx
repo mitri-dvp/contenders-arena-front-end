@@ -19,11 +19,11 @@ export default function Home() {
             height={100}
           />
 
-          <ul className="flex items-center gap-4 font-primary text-xl font-light uppercase text-white 2xl:gap-8">
+          <ul className="flex items-center gap-4 font-primary text-lg font-light uppercase text-white xl:text-xl 2xl:gap-8">
             <li>Gameplay</li>
             <li>Community</li>
             <li>More</li>
-            <li className="flex h-14 items-center bg-button bg-contain bg-center bg-no-repeat px-8 font-primary-cond text-2xl font-semibold text-black">
+            <li className="flex h-14 items-center bg-button bg-contain bg-center bg-no-repeat px-4 font-primary-cond font-semibold text-black xl:px-8 xl:text-2xl">
               Join the Playtest
             </li>
           </ul>
@@ -51,16 +51,16 @@ export default function Home() {
               quality={100}
             />
             <div className="absolute top-0 h-full w-full">
-              <h1 className="relative left-[10%] top-[25%] mx-auto w-full max-w-[1150px] font-primary-cond text-8xl font-extrabold uppercase italic text-green-primary 2xl:left-0 2xl:text-9xl 2xl:leading-[0.85]">
+              <h1 className="relative left-[10%] top-[25%] mx-auto w-full max-w-[1150px] font-primary-cond text-7xl font-extrabold uppercase italic text-green-primary xl:text-8xl 2xl:left-[5%] 2xl:text-9xl 2xl:leading-[0.85] 3xl:left-0">
                 a new <br /> class
               </h1>
-              <h1 className="relative left-[10%] top-[25%] z-10 mx-auto w-full max-w-[1150px] font-primary-cond text-8xl font-extrabold uppercase italic text-white 2xl:left-0 2xl:text-9xl">
+              <h1 className="relative left-[10%] top-[25%] z-10 mx-auto w-full max-w-[1150px] font-primary-cond text-7xl font-extrabold uppercase italic text-white xl:text-8xl 2xl:left-[5%] 2xl:text-9xl 3xl:left-0">
                 of gladiators
               </h1>
-              <h1 className="relative left-[10%] top-[25%] z-10 mx-auto w-full max-w-[1150px] translate-x-[64px] translate-y-[16px] font-primary-cond text-4xl font-extrabold uppercase italic text-white 2xl:left-0 2xl:text-6xl">
+              <h1 className="relative left-[15%] top-[25%] z-10 mx-auto w-full max-w-[1150px] translate-x-[64px] translate-y-[16px] font-primary-cond text-4xl font-extrabold uppercase italic text-white xl:left-[10%] 2xl:left-[5%] 2xl:text-6xl 3xl:left-0">
                 are ready for <br /> their arena
                 <Image
-                  className="absolute bottom-0 translate-y-[88px]"
+                  className="absolute bottom-0 translate-y-[60px] xl:translate-y-[70px] 3xl:translate-y-[88px]"
                   src={"/assets/svg/chevron-down.svg"}
                   alt="chevron-down.svg"
                   width={50}
@@ -114,18 +114,18 @@ export default function Home() {
         </section>
         <section className="relative">
           <div className="absolute mx-auto w-full max-w-[1472px] justify-between px-[10%] pt-[10%]">
-            <h1 className="font-primary-cond text-6xl font-bold uppercase italic text-green-primary 2xl:left-0 2xl:text-7xl ">
+            <h1 className="font-primary-cond text-5.5xl font-bold uppercase italic text-green-primary xl:text-6xl 2xl:left-0 2xl:text-7xl ">
               fast-paced action, <br /> strategic gameplay, <br />
               thrilling competition.
             </h1>
-            <p className="mt-[3%] font-primary-cond text-xl font-light text-white 2xl:text-2xl">
+            <p className="mt-[1.5%] font-primary-cond text-xl font-light text-white xl:mt-[3%] 2xl:text-2xl">
               Contenders: Arena is an exhilarating sport that takes you into a
               world of fast-paced <br /> action, strategic gameplay, and
               thrilling competition. Become the skilled pilot of a new <br />
               kind of gladiator and prepare to engage in intense battles unlike
               anything you&apos;ve <br /> experienced before!
             </p>
-            <div className="mt-[3%] flex gap-[2%]">
+            <div className="mt-[1.5%] flex gap-[2%] xl:mt-[3%]">
               <button className="flex h-16 w-max items-center bg-button-steam bg-contain bg-center bg-no-repeat pl-4 pr-36 font-primary-cond text-xl font-light uppercase tracking-tight text-white">
                 <span>coming soon to</span>
               </button>
@@ -167,11 +167,11 @@ export default function Home() {
                 draggable={false}
                 quality={100}
               />
-              <h1 className="mt-[10%] text-center font-owners-wide text-3xl font-bold uppercase text-green-primary 2xl:mt-[12%] 2xl:text-4xl ">
+              <h1 className="mt-[10%] text-center font-owners-wide text-2xl font-bold uppercase text-green-primary xl:text-3xl 2xl:mt-[12%] 2xl:text-4xl ">
                 GUNN <br />
                 INDUSTRIES
               </h1>
-              <p className="mt-[3%] text-center font-primary-cond text-xl font-light uppercase text-white 2xl:text-2xl">
+              <p className="mt-[3%] text-center font-primary-cond text-base font-light uppercase text-white xl:text-xl 2xl:text-2xl">
                 GUNN gladiators are built to <br /> withstand attacks and
                 inflict maximum <br /> damage. They may not be as agile as
                 <br /> others, but they can pack a punch.
@@ -187,11 +187,11 @@ export default function Home() {
                 draggable={false}
                 quality={100}
               />
-              <h1 className="mt-[5%] text-center font-owners-wide text-3xl font-bold uppercase text-green-primary 2xl:mt-[7%] 2xl:text-4xl ">
+              <h1 className="mt-[5%] text-center font-owners-wide text-2xl font-bold uppercase text-green-primary xl:text-3xl 2xl:mt-[7%] 2xl:text-4xl ">
                 VECTOR <br />
                 CORP.
               </h1>
-              <p className="mt-[3%] text-center font-primary-cond text-xl font-light uppercase text-white 2xl:text-2xl">
+              <p className="mt-[3%] text-center font-primary-cond text-base font-light uppercase text-white xl:text-xl 2xl:text-2xl">
                 Vector gladiators are built for pursuit <br /> and seizure,
                 applying superior agility
                 <br /> and tracking capabilities.
@@ -207,10 +207,10 @@ export default function Home() {
                 draggable={false}
                 quality={100}
               />
-              <h1 className="mt-[14%] text-center font-owners-wide text-3xl font-bold uppercase text-green-primary 2xl:mt-[15%] 2xl:text-4xl ">
+              <h1 className="mt-[14%] text-center font-owners-wide text-2xl font-bold uppercase text-green-primary xl:text-3xl 2xl:mt-[15%] 2xl:text-4xl ">
                 SHIFT
               </h1>
-              <p className="mt-[12%] text-center font-primary-cond text-xl font-light uppercase text-white 2xl:text-2xl">
+              <p className="mt-[12%] text-center font-primary-cond text-base font-light uppercase text-white xl:text-xl 2xl:text-2xl">
                 Shift gladiators are built for <br /> support. capable of
                 self-repair <br />
                 and protecting teammates.
@@ -240,7 +240,7 @@ export default function Home() {
         </section>
         <section>
           <div className="absolute mx-auto w-full max-w-[1472px] justify-between px-[10%] pt-[5%]">
-            <h1 className="font-primary-cond text-5xl font-bold uppercase italic text-green-primary 2xl:left-0 2xl:text-7xl ">
+            <h1 className="font-primary-cond text-4.5xl font-bold uppercase italic text-green-primary xl:text-5xl 2xl:left-0 2xl:text-7xl ">
               we need you <br /> to build the ultimate
               <br /> combat experience
             </h1>
@@ -274,10 +274,10 @@ export default function Home() {
         </section>
         <section>
           <div className="absolute mx-auto w-full  justify-between px-[10%] pt-[8%] 2xl:pt-[12%]">
-            <h1 className="text-center font-primary-cond text-9xl font-bold uppercase italic text-green-primary 2xl:left-0 2xl:text-11xl">
+            <h1 className="text-center font-primary-cond text-8xl font-bold uppercase italic text-green-primary xl:text-9xl 2xl:left-0 2xl:text-11xl">
               ARE YOU READY
             </h1>
-            <p className="mt-[2%] text-center font-primary-cond text-4.5xl font-light uppercase text-white 2xl:mt-[7%] 2xl:text-5.5xl">
+            <p className="mt-[2%] text-center font-primary-cond text-4xl font-light uppercase text-white xl:text-4.5xl 2xl:mt-[7%] 2xl:text-5.5xl">
               A NEW CLASS OF GLADIATORS ARE READY FOR THEIR ARENA!
             </p>
             <div className="mx-auto mt-[3%] flex w-full max-w-[900px] gap-[2%] 2xl:mt-[3%] 2xl:max-w-[1080px]">
@@ -311,13 +311,13 @@ export default function Home() {
             width={400}
             height={100}
           />
-          <div className="flex items-center gap-2 font-primary text-base uppercase text-zinc-300 2xl:gap-8 2xl:text-lg">
+          <div className="flex items-center gap-2 font-primary text-xs uppercase text-zinc-300 xl:text-base 2xl:gap-8 2xl:text-lg">
             <div className="w-1/3">
               <Image
                 className="ml-auto"
                 src={"/assets/svg/footer-socials.svg"}
                 alt="footer-socials.svg"
-                width={400}
+                width={350}
                 height={100}
               />
             </div>

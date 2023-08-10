@@ -15,8 +15,8 @@ export default {
         "owners-wide": ["OwmersWide", ...defaultTheme.fontFamily.sans],
       },
       fontSize: {
-        "4.5xl": ["44px", "32px"],
-        "5.5xl": ["52px", "32px"],
+        "4.5xl": ["44px", "36px"],
+        "5.5xl": ["52px", "48px"],
         "10xl": ["144px", "32px"],
         "11xl": ["160px", "32px"],
       },
@@ -39,6 +39,7 @@ export default {
       },
       screens: {
         "2xl": "1440px",
+        "3xl": "1680px",
       },
     },
   },
