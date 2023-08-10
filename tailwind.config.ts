@@ -31,6 +31,10 @@ export default {
           "url('/assets/png/corporate-card-vector-background.png')",
         "corporate-shift":
           "url('/assets/png/corporate-card-shift-background.png')",
+        "mobile-hero-background":
+          "url('/assets/png/mobile-hero-background.png')",
+        "mobile-card-background":
+          "url('/assets/png/mobile-card-background.png')",
       },
       colors: {
         green: {
