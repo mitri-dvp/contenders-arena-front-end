@@ -1,6 +1,8 @@
 import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
+import DesktopGladiatorGallery from "~/components/DesktopGladiatorGallery";
+import MobileGladiatorGallery from "~/components/MobileGladiatorGallery";
 
 export default function Home() {
   return (
@@ -183,8 +185,8 @@ export default function Home() {
 
             <Image
               className="w-full"
-              src={"/assets/png/stricker-section.png"}
-              alt="stricker-section.png"
+              src={"/assets/png/steam-section.png"}
+              alt="steam-section.png"
               width={1920}
               height={1084}
               draggable={false}
@@ -192,7 +194,7 @@ export default function Home() {
             />
 
             <Image
-              className="absolute left-[43.3%] top-[16.1%] z-20 w-[11.56%]"
+              className="absolute left-[43.3%] top-[16.4%] z-20 w-[11.56%]"
               src={"/assets/png/stricker-section-hand.png"}
               alt="stricker-section-hand.png"
               width={1920}
@@ -200,6 +202,8 @@ export default function Home() {
               draggable={false}
               quality={100}
             />
+
+            <DesktopGladiatorGallery />
           </div>
           <div className="relative md:hidden">
             <div className="absolute w-full">
@@ -344,8 +348,8 @@ export default function Home() {
             </div>
             <Image
               className="w-full"
-              src={"/assets/png/corporate-section-background.png"}
-              alt="corporate-section-background.png"
+              src={"/assets/png/corporate-section.png"}
+              alt="corporate-section.png"
               width={1920}
               height={932}
               draggable={false}
@@ -353,15 +357,7 @@ export default function Home() {
             />
           </div>
           <div className="relative md:hidden">
-            <Image
-              className="w-full"
-              src={"/assets/png/mobile-stricker-background.png"}
-              alt="mobile-stricker-background.png"
-              width={393}
-              height={510}
-              draggable={false}
-              quality={100}
-            />
+            <MobileGladiatorGallery />
           </div>
         </section>
         <section>
