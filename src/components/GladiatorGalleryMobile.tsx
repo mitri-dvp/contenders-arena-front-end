@@ -11,7 +11,7 @@ import { Swiper as SwiperReact, SwiperSlide } from "swiper/react";
 import { EffectCoverflow } from "swiper/modules";
 import type Swiper from "swiper";
 
-const MobileGladiatorGallery = () => {
+const GladiatorGalleryMobile = () => {
   const [swiper, setSwiper] = useState<Swiper>();
   const [activeIndex, setActiveIndex] = useState(1);
 
@@ -107,4 +107,4 @@ const MobileGladiatorGallery = () => {
   );
 };
 
-export default MobileGladiatorGallery;
+export default GladiatorGalleryMobile;

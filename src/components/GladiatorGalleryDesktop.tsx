@@ -11,7 +11,7 @@ import { Swiper as SwiperReact, SwiperSlide } from "swiper/react";
 import { EffectCoverflow } from "swiper/modules";
 import type Swiper from "swiper";
 
-const DesktopGladiatorGallery = () => {
+const GladiatorGalleryDesktop = () => {
   const [swiper, setSwiper] = useState<Swiper>();
   const [activeIndex, setActiveIndex] = useState(1);
 
@@ -114,4 +114,4 @@ const DesktopGladiatorGallery = () => {
   );
 };
 
-export default DesktopGladiatorGallery;
+export default GladiatorGalleryDesktop;

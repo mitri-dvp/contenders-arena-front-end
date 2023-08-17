@@ -1,8 +1,13 @@
 import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
-import DesktopGladiatorGallery from "~/components/DesktopGladiatorGallery";
-import MobileGladiatorGallery from "~/components/MobileGladiatorGallery";
+import GladiatorGalleryDesktop from "~/components/GladiatorGalleryDesktop";
+import GladiatorGalleryMobile from "~/components/GladiatorGalleryMobile";
+import PlaytestInputDesktop from "~/components/PlaytestInputDesktop";
+import PlaytestInputSectionDesktop from "~/components/PlaytestInputSectionDesktop";
+import PlaytestInputMobile from "~/components/PlaytestInputMobile";
+import PlaytestInputSectionMobile from "~/components/PlaytestInputSectionMobile";
+import Video from "~/components/Video";
 
 export default function Home() {
   return (
@@ -22,12 +27,15 @@ export default function Home() {
           />
 
           <ul className="flex items-center gap-4 font-primary text-lg font-light uppercase text-white xl:text-xl 2xl:gap-8">
-            <li>Gameplay</li>
-            <li>Community</li>
-            <li>More</li>
-            <li className="flex h-14 items-center bg-button bg-contain bg-center bg-no-repeat px-4 font-primary-cond font-semibold text-black xl:px-8 xl:text-2xl">
+            <Link href={"#video"}>Gameplay</Link>
+            <Link href={"#community"}>Community</Link>
+            <Link href={"#striker"}>More</Link>
+            <Link
+              href={"#playtest"}
+              className="flex h-14 items-center bg-button bg-contain bg-center bg-no-repeat px-4 font-primary-cond font-semibold text-black xl:px-8 xl:text-2xl"
+            >
               Join the Playtest
-            </li>
+            </Link>
           </ul>
         </nav>
         <nav className="relative  w-full md:hidden">
@@ -77,16 +85,19 @@ export default function Home() {
                 of gladiators
               </h1>
               <h1 className="relative left-[15%] top-[25%] z-10 mx-auto w-full max-w-[1150px] translate-x-[64px] translate-y-[16px] font-primary-cond text-4xl font-extrabold uppercase italic text-white xl:left-[10%] 2xl:left-[5%] 2xl:text-6xl 3xl:left-0">
-                are ready for <br /> their arena
-                <Image
-                  className="absolute bottom-0 translate-y-[60px] xl:translate-y-[70px] 3xl:translate-y-[88px]"
-                  src={"/assets/svg/chevron-down.svg"}
-                  alt="chevron-down.svg"
-                  width={50}
-                  height={37}
-                  draggable={false}
-                  quality={100}
-                />
+                are ready for
+                <br />
+                <Link href={"#video"}>
+                  <Image
+                    className="absolute bottom-0 translate-y-[60px] xl:translate-y-[70px] 3xl:translate-y-[88px]"
+                    src={"/assets/svg/chevron-down.svg"}
+                    alt="chevron-down.svg"
+                    width={50}
+                    height={37}
+                    draggable={false}
+                    quality={100}
+                  />
+                </Link>
               </h1>
             </div>
             <div className="absolute bottom-[6%] right-0 z-10 w-full">
@@ -109,13 +120,7 @@ export default function Home() {
                   draggable={false}
                   quality={100}
                 />
-                <input
-                  className="absolute left-[14%] top-[8%] h-[12%] w-[25%] bg-transparent font-primary-cond text-white outline-none"
-                  placeholder="EMAIL ADDRESS"
-                />
-                <button className="absolute left-[43.3%] top-[2%] flex h-[28%] w-[37%] items-center justify-center bg-transparent font-primary-cond text-xl font-semibold uppercase text-black 2xl:text-2xl">
-                  Join the Playtest
-                </button>
+                <PlaytestInputDesktop />
               </div>
             </div>
           </div>
@@ -136,30 +141,16 @@ export default function Home() {
                     width={300}
                     height={100}
                   />
-                  <input
-                    className="absolute bottom-[20%] left-[10%] w-[40%] bg-transparent font-primary-cond text-sm text-white outline-none"
-                    placeholder="EMAIL ADDRESS"
-                  />
-                  <button className="absolute bottom-[5%] right-[1%] h-[85%] w-[49%] items-center justify-center  bg-transparent font-primary-cond text-sm font-semibold uppercase text-black">
-                    Join the Playtest
-                  </button>
+                  <PlaytestInputMobile />
                 </div>
               </div>
             </div>
           </div>
         </section>
-        <section>
-          <Image
-            className="w-full"
-            src={"/assets/png/video-section.png"}
-            alt="video-section.png"
-            width={1920}
-            height={1903}
-            draggable={false}
-            quality={100}
-          />
+        <section id="video">
+          <Video />
         </section>
-        <section className="relative">
+        <section className="relative" id="community">
           <div className="hidden md:block">
             <div className="absolute mx-auto w-full max-w-[1472px] justify-between px-[10%] pt-[10%]">
               <h1 className="font-primary-cond text-5.5xl font-bold uppercase italic text-green-primary xl:text-6xl 2xl:left-0 2xl:text-7xl ">
@@ -167,19 +158,28 @@ export default function Home() {
                 thrilling competition.
               </h1>
               <p className="mt-[1.5%] font-primary-cond text-xl font-light text-white xl:mt-[3%] 2xl:text-2xl">
-                Contenders: Arena is an exhilarating sport that takes you into a
-                world of fast-paced <br /> action, strategic gameplay, and
-                thrilling competition. Become the skilled pilot of a new <br />
+                Contenders: Arena is an exhilarating 3v3 shooter that takes you
+                into a world of fast-paced <br /> action, strategic gameplay,
+                and thrilling competition. Become the skilled pilot of a new{" "}
+                <br />
                 kind of gladiator and prepare to engage in intense battles
                 unlike anything you&apos;ve <br /> experienced before!
               </p>
               <div className="mt-[1.5%] flex gap-[2%] xl:mt-[3%]">
-                <button className="flex h-16 w-max items-center bg-button-steam bg-contain bg-center bg-no-repeat pl-4 pr-36 font-primary-cond text-xl font-light uppercase tracking-tight text-white">
+                <Link
+                  href={
+                    "https://store.steampowered.com/app/2445510/Contenders_Arena/"
+                  }
+                  className="flex h-16 w-max items-center bg-button-steam bg-contain bg-center bg-no-repeat pl-4 pr-36 font-primary-cond text-xl font-light uppercase tracking-tight text-white"
+                >
                   coming soon to
-                </button>
-                <button className="flex h-16 items-center bg-button bg-contain bg-center bg-no-repeat px-8 font-primary-cond text-xl font-semibold uppercase text-black">
+                </Link>
+                <Link
+                  href={"#playtest"}
+                  className="flex h-16 items-center bg-button bg-contain bg-center bg-no-repeat px-8 font-primary-cond text-xl font-semibold uppercase text-black"
+                >
                   Join the Playtest
-                </button>
+                </Link>
               </div>
             </div>
 
@@ -203,7 +203,7 @@ export default function Home() {
               quality={100}
             />
 
-            <DesktopGladiatorGallery />
+            <GladiatorGalleryDesktop />
           </div>
           <div className="relative md:hidden">
             <div className="absolute w-full">
@@ -283,7 +283,7 @@ export default function Home() {
             />
           </div>
         </section>
-        <section>
+        <section id="striker">
           <div className="hidden md:block">
             <div className="absolute mx-auto flex w-full justify-between px-[5%] pt-[5%]">
               <div className="relative z-10 aspect-[619/819] w-full bg-corporate-gunn bg-cover">
@@ -357,7 +357,7 @@ export default function Home() {
             />
           </div>
           <div className="relative md:hidden">
-            <MobileGladiatorGallery />
+            <GladiatorGalleryMobile />
           </div>
         </section>
         <section>
@@ -369,19 +369,27 @@ export default function Home() {
                 <br /> thrilling competition.
               </h1>
               <p className="absolute top-[66%] w-full text-center font-primary-cond text-sm font-light leading-4 text-white ">
-                Contenders: Arena is an exhilarating sport that takes you into a
-                world of <br /> fast-paced action, strategic gameplay, and
-                thrilling competition. Become the <br /> skilled pilot of a new
-                kind of gladiator and prepare to engage in intense <br />
+                Contenders: Arena is an exhilarating 3v3 shooter that takes you
+                into a world of <br /> fast-paced action, strategic gameplay,
+                and thrilling competition. Become the <br /> skilled pilot of a
+                new kind of gladiator and prepare to engage in intense <br />
                 battles unlike anything you&apos;ve experienced before!
               </p>
               <div className="absolute top-[85%] flex w-full justify-between px-7">
-                <button className="flex h-8 w-max items-center bg-button-steam bg-contain bg-center bg-no-repeat pl-4 pr-20 font-primary-cond text-xs font-light uppercase tracking-tight text-white">
+                <Link
+                  href={
+                    "https://store.steampowered.com/app/2445510/Contenders_Arena/"
+                  }
+                  className="flex h-8 w-max items-center bg-button-steam bg-contain bg-center bg-no-repeat pl-4 pr-20 font-primary-cond text-xs font-light uppercase tracking-tight text-white"
+                >
                   coming soon to
-                </button>
-                <button className="flex h-8 items-center bg-button bg-contain bg-center bg-no-repeat px-8 font-primary-cond text-xs font-semibold uppercase text-black">
+                </Link>
+                <Link
+                  href={"#playtest"}
+                  className="flex h-8 items-center bg-button bg-contain bg-center bg-no-repeat px-8 font-primary-cond text-xs font-semibold uppercase text-black"
+                >
                   Join the Playtest
-                </button>
+                </Link>
               </div>
             </div>
             <Image
@@ -439,9 +447,12 @@ export default function Home() {
                 survived not only five centuries.
               </p>
               <div className="mt-[1%] flex gap-[2%] 2xl:mt-[1.5%] 3xl:mt-[3%]">
-                <button className="flex h-16 w-max items-center bg-button-discord bg-contain bg-center bg-no-repeat pl-20 pr-8 font-primary-cond text-xl font-bold uppercase tracking-tight text-green-primary">
+                <Link
+                  href={"https://discord.com/invite/contenders"}
+                  className="flex h-16 w-max items-center bg-button-discord bg-contain bg-center bg-no-repeat pl-20 pr-8 font-primary-cond text-xl font-bold uppercase tracking-tight text-green-primary"
+                >
                   Join Discord Community
-                </button>
+                </Link>
               </div>
             </div>
 
@@ -501,7 +512,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section>
+        <section id="playtest">
           <div className="hidden md:block">
             <div className="absolute mx-auto w-full  justify-between px-[10%] pt-[8%] 2xl:pt-[12%]">
               <h1 className="text-center font-primary-cond text-8xl font-bold uppercase italic text-green-primary xl:text-9xl 2xl:left-0 2xl:text-11xl">
@@ -510,17 +521,7 @@ export default function Home() {
               <p className="mt-[2%] text-center font-primary-cond text-4xl font-light uppercase text-white xl:text-4.5xl 2xl:mt-[7%] 2xl:text-5.5xl">
                 A NEW CLASS OF GLADIATORS ARE READY FOR THEIR ARENA!
               </p>
-              <div className="mx-auto mt-[3%] flex w-full max-w-[900px] gap-[2%] 2xl:mt-[3%] 2xl:max-w-[1080px]">
-                <div className="flex aspect-[962/90] w-[75%] flex-shrink-0 items-center bg-ready-email-input bg-contain bg-no-repeat">
-                  <input
-                    className="ml-[12%] w-[85%] bg-transparent font-primary-cond text-2xl text-white outline-none"
-                    placeholder="EMAIL ADDRESS"
-                  />
-                </div>
-                <button className="flex w-full translate-y-[5%] scale-[1.075] items-center justify-center bg-button bg-contain bg-no-repeat font-primary-cond text-xl font-semibold uppercase text-black 2xl:text-2xl">
-                  <span className="-translate-y-[8%]">Join the Playtest</span>
-                </button>
-              </div>
+              <PlaytestInputSectionDesktop />
             </div>
 
             <Image
@@ -550,33 +551,7 @@ export default function Home() {
               <p className="absolute top-[35%] w-full text-center font-primary-cond text-lg font-light uppercase text-white">
                 A NEW CLASS OF GLADIATORS ARE READY FOR THEIR ARENA!
               </p>
-              <div className="absolute top-[50%] w-full">
-                <div className="relative">
-                  <Image
-                    className="mx-auto mb-[2.5%]"
-                    src={"/assets/svg/mobile-ready-email.svg"}
-                    alt="mobile-ready-email.svg"
-                    width={337}
-                    height={40}
-                  />
-                  <input
-                    className="absolute left-[20%] top-[8%] h-[80%] w-[70%] bg-transparent font-primary-cond text-white outline-none"
-                    placeholder="EMAIL ADDRESS"
-                  />
-                </div>
-                <div className="relative">
-                  <Image
-                    className="mx-auto"
-                    src={"/assets/svg/mobile-ready-playtest.svg"}
-                    alt="mobile-ready-playtest.svg"
-                    width={337}
-                    height={40}
-                  />
-                  <button className="absolute left-[7%] top-[0%] flex h-[100%] w-[86%] items-center justify-center bg-transparent font-primary-cond text-xl font-semibold uppercase text-black 2xl:text-2xl">
-                    Join the Playtest
-                  </button>
-                </div>
-              </div>
+              <PlaytestInputSectionMobile />
             </div>
           </div>
         </section>
@@ -589,20 +564,49 @@ export default function Home() {
             height={100}
           />
           <div className="flex flex-col items-center gap-10 font-primary text-xs uppercase text-zinc-300 md:flex-row md:gap-2 xl:text-base 2xl:gap-8 2xl:text-lg">
-            <div className="w-[75%] md:w-1/3">
+            <div className="relative ml-auto mr-auto w-[75%] md:mr-0 md:w-1/6">
               <Image
-                className="ml-auto mr-auto md:mr-0"
+                className="w-full"
                 src={"/assets/svg/footer-socials.svg"}
                 alt="footer-socials.svg"
                 width={350}
                 height={100}
               />
+              <div className="absolute left-0 top-0 flex h-full w-full justify-between gap-[2%] px-[5%]">
+                <Link
+                  href={"https://www.tiktok.com/@contendersarena"}
+                  className="block h-full w-full "
+                />
+                <Link
+                  href={"https://twitter.com/contendersarena"}
+                  className="block h-full w-full "
+                />
+                <Link
+                  href={"https://www.youtube.com/@ContendersArena"}
+                  className="block h-full w-full "
+                />
+                <Link
+                  href={"https://www.facebook.com/contendersarena"}
+                  className="block h-full w-full "
+                />
+                <Link
+                  href={"https://www.instagram.com/contendersarena/"}
+                  className="block h-full w-full "
+                />
+                <Link href={"#"} className="block h-full w-full " />
+                <Link
+                  href={
+                    "https://www.twitch.tv/directory/category/contenders-arena"
+                  }
+                  className="block h-full w-full "
+                />
+              </div>
             </div>
             <div className="w-full md:w-1/3">
-              <ul className="flex flex-col justify-around text-center font-light md:flex-row md:text-left">
-                <li>Privacy Policy</li>
-                <li>Carrers</li>
-                <li>Terms and Conditions</li>
+              <ul className="flex flex-col justify-around gap-4 text-center font-light md:flex-row md:gap-0 md:text-left">
+                <Link href={"#"}>Privacy Policy</Link>
+                <Link href={"https://careers.gamecan.eu/"}>Carrers</Link>
+                <Link href={"#"}>Terms and Conditions</Link>
               </ul>
             </div>
             <div className="w-full text-center font-light text-green-primary md:w-1/3 md:text-left">
