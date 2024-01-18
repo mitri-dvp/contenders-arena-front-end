@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React, { useState } from "react";
 
-const Video = () => {
+const VideoOne = () => {
   const [clicked, setClicked] = useState(false);
   const handleClick = () => {
     setClicked(true);
@@ -17,17 +17,19 @@ const Video = () => {
         draggable={false}
         quality={100}
       />
-      <iframe
-        className={`absolute top-0 aspect-[1920/1084] w-full ${
-          clicked ? "block" : "hidden"
-        }`}
-        src="https://www.youtube.com/embed/p6L0qRpCFgU?autoplay=1&controls=0&rel=0"
-        frameBorder="0"
-        allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; autoplay; modestbranding;"
-        allowFullScreen
-      />
+      {clicked ? (
+        <iframe
+          className={`absolute top-0 aspect-[1920/1084] w-full ${
+            clicked ? "block" : "hidden"
+          }`}
+          src="https://www.youtube.com/embed/gq_s3AN1Le0?autoplay=1&controls=0&rel=0"
+          frameBorder="0"
+          allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; autoplay; modestbranding;"
+          allowFullScreen
+        />
+      ) : null}
     </div>
   );
 };
 
-export default Video;
+export default VideoOne;

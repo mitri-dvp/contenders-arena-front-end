@@ -8,7 +8,7 @@ import React, { useState } from "react";
 import { Swiper as SwiperReact, SwiperSlide } from "swiper/react";
 
 // import required modules
-import { EffectCoverflow } from "swiper/modules";
+import { Navigation, Pagination } from "swiper/modules";
 import type Swiper from "swiper";
 
 const GladiatorGalleryMobile = () => {
@@ -51,22 +51,15 @@ const GladiatorGalleryMobile = () => {
       <div className="absolute top-[50%] h-full w-full -translate-y-[50%] scale-75">
         <SwiperReact
           onSwiper={(swiper) => setSwiper(swiper)}
-          onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
+          onSlideChange={(swiper) => {
+            setActiveIndex(swiper.realIndex);
+          }}
           className="h-full"
-          effect={"coverflow"}
-          grabCursor={true}
           centeredSlides={true}
           slidesPerView={1}
           initialSlide={1}
-          coverflowEffect={{
-            rotate: 0,
-            stretch: 0,
-            depth: 0,
-            modifier: 1,
-            slideShadows: false,
-          }}
           pagination={true}
-          modules={[EffectCoverflow]}
+          loop={true}
         >
           <SwiperSlide>
             <Image

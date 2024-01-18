@@ -25,7 +25,7 @@ const PlaytestInputSectionDesktop = () => {
         />
       </div>
       <button className="flex w-full translate-y-[5%] scale-[1.075] items-center justify-center bg-button bg-contain bg-no-repeat font-primary-cond text-xl font-semibold uppercase text-black 2xl:text-2xl">
-        <span className="-translate-y-[8%]">Join the Playtest</span>
+        <span className="-translate-y-[8%]">Join</span>
       </button>
     </form>
   );

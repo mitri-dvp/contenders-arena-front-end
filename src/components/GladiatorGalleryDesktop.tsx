@@ -11,9 +11,50 @@ import { Swiper as SwiperReact, SwiperSlide } from "swiper/react";
 import { EffectCoverflow } from "swiper/modules";
 import type Swiper from "swiper";
 
-const GladiatorGalleryDesktop = () => {
-  const [swiper, setSwiper] = useState<Swiper>();
-  const [activeIndex, setActiveIndex] = useState(1);
+const GladiatorGalleryDesktop = ({
+  activeIndex,
+  slidePrev,
+  slideNext,
+}: {
+  activeIndex: number;
+  slidePrev: () => void;
+  slideNext: () => void;
+}) => {
+  const getContenderStyles = () => {
+    return {
+      center: {
+        imageStyles: "scale-[75%] z-10",
+        containerStyles:
+          "transition-transform duration-500 translate-x-[50%] -translate-x-[50%] z-10",
+      },
+
+      right: {
+        imageStyles: "scale-[60%] grayscale",
+        containerStyles: "transition-transform duration-500  translate-x-[90%]",
+      },
+
+      left: {
+        imageStyles: "scale-[60%] grayscale",
+        containerStyles: "transition-transform duration-500  translate-x-[10%]",
+      },
+    };
+  };
+
+  const getDefenderStyles = () => {
+    if (activeIndex === 0) return getContenderStyles().left;
+    if (activeIndex === 1) return getContenderStyles().center;
+    return getContenderStyles().right;
+  };
+  const getStrikerStyles = () => {
+    if (activeIndex === 0) return getContenderStyles().center;
+    if (activeIndex === 1) return getContenderStyles().right;
+    return getContenderStyles().left;
+  };
+  const getRunnerStyles = () => {
+    if (activeIndex === 0) return getContenderStyles().right;
+    if (activeIndex === 1) return getContenderStyles().left;
+    return getContenderStyles().center;
+  };
 
   return (
     <div className="relative">
@@ -28,8 +69,8 @@ const GladiatorGalleryDesktop = () => {
       />
       <div className="absolute top-0 h-full w-full">
         <Image
-          className="absolute left-[15%] top-1/2 z-10 w-[50px] -translate-y-1/2 cursor-pointer"
-          onClick={() => swiper?.slidePrev()}
+          className="absolute left-[15%] top-1/2 z-10 w-[80px] -translate-y-1/2 cursor-pointer"
+          onClick={() => slidePrev()}
           src={"/assets/svg/arrow-left.svg"}
           alt="arrow-left.svg"
           width={100}
@@ -38,8 +79,8 @@ const GladiatorGalleryDesktop = () => {
           quality={100}
         />
         <Image
-          className="absolute right-[15%] top-1/2 z-10 w-[50px] -translate-y-1/2 cursor-pointer"
-          onClick={() => swiper?.slideNext()}
+          className="absolute right-[15%] top-1/2 z-10 w-[80px] -translate-y-1/2 cursor-pointer"
+          onClick={() => slideNext()}
           src={"/assets/svg/arrow-right.svg"}
           alt="arrow-right.svg"
           width={100}
@@ -47,68 +88,96 @@ const GladiatorGalleryDesktop = () => {
           draggable={false}
           quality={100}
         />
+
+        <Image
+          className="absolute right-[20%] top-[15%] z-10 w-[30px] -translate-y-1/2 cursor-pointer"
+          src={"/assets/svg/corner-right.svg"}
+          alt="corner-right.svg"
+          width={100}
+          height={40}
+          draggable={false}
+          quality={100}
+        />
+        <Image
+          className="absolute bottom-[15%] right-[20%] z-10 w-[30px] -translate-y-1/2 cursor-pointer"
+          src={"/assets/svg/corner-right.svg"}
+          alt="corner-right.svg"
+          width={100}
+          height={40}
+          draggable={false}
+          quality={100}
+        />
+        <Image
+          className="absolute left-[20%] top-[15%] z-10 w-[30px] -translate-y-1/2 cursor-pointer"
+          src={"/assets/svg/corner-left.svg"}
+          alt="corner-left.svg"
+          width={100}
+          height={40}
+          draggable={false}
+          quality={100}
+        />
+        <Image
+          className="absolute bottom-[15%] left-[20%] z-10 w-[30px] -translate-y-1/2 cursor-pointer"
+          src={"/assets/svg/corner-left.svg"}
+          alt="corner-left.svg"
+          width={100}
+          height={40}
+          draggable={false}
+          quality={100}
+        />
       </div>
-      <div className="absolute top-[50%] h-full w-full -translate-y-[50%] scale-125">
-        <SwiperReact
-          onSwiper={(swiper) => setSwiper(swiper)}
-          onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
-          className="h-full"
-          effect={"coverflow"}
-          grabCursor={true}
-          centeredSlides={true}
-          slidesPerView={3}
-          initialSlide={1}
-          coverflowEffect={{
-            rotate: 0,
-            stretch: 0,
-            depth: 1200,
-            modifier: 1,
-            slideShadows: false,
-            scale: 1.5,
-          }}
-          pagination={true}
-          modules={[EffectCoverflow]}
+      <div className="absolute top-[50%] h-full w-full -translate-y-[50%]">
+        <div
+          className={`absolute flex h-full w-1/2 items-center justify-center ${
+            getDefenderStyles().containerStyles
+          }`}
         >
-          <SwiperSlide>
-            <div className="flex h-full items-center justify-center">
-              <Image
-                className={`w-full ${activeIndex === 0 ? "" : "grayscale"}`}
-                src={"/assets/png/robot-DEFENDER.png"}
-                alt="DEFENDER.png"
-                width={1907}
-                height={1003}
-                draggable={false}
-                quality={100}
-              />
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="flex h-full items-center justify-center">
-              <Image
-                className={`w-full ${activeIndex === 1 ? "" : "grayscale"}`}
-                src={"/assets/png/robot-STRIKER.png"}
-                alt="STRIKER.png"
-                width={1907}
-                height={1003}
-                draggable={false}
-                quality={100}
-              />
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="flex h-full items-center justify-center">
-              <Image
-                className={`w-full ${activeIndex === 2 ? "" : "grayscale"}`}
-                src={"/assets/png/robot-RUNNER.png"}
-                alt="RUNNER.png"
-                width={1907}
-                height={1003}
-                draggable={false}
-                quality={100}
-              />
-            </div>
-          </SwiperSlide>
-        </SwiperReact>
+          <Image
+            className={`w-full transition-all ${
+              getDefenderStyles().imageStyles
+            }`}
+            src={"/assets/png/robot-DEFENDER.png"}
+            alt="DEFENDER.png"
+            width={1907}
+            height={1003}
+            draggable={false}
+            quality={100}
+          />
+        </div>
+
+        <div
+          className={`absolute flex h-full w-1/2 items-center justify-center ${
+            getStrikerStyles().containerStyles
+          }`}
+        >
+          <Image
+            className={`w-full transition-all ${
+              getStrikerStyles().imageStyles
+            }`}
+            src={"/assets/png/robot-STRIKER.png"}
+            alt="STRIKER.png"
+            width={1907}
+            height={1003}
+            draggable={false}
+            quality={100}
+          />
+        </div>
+
+        <div
+          className={`absolute flex h-full w-1/2 items-center justify-center ${
+            getRunnerStyles().containerStyles
+          }`}
+        >
+          <Image
+            className={`w-full transition-all ${getRunnerStyles().imageStyles}`}
+            src={"/assets/png/robot-RUNNER.png"}
+            alt="RUNNER.png"
+            width={1907}
+            height={1003}
+            draggable={false}
+            quality={100}
+          />
+        </div>
       </div>
     </div>
   );

@@ -26,7 +26,7 @@ const PlaytestInputDesktop = () => {
         typeof="submit"
         className="absolute left-[43.3%] top-[2%] flex h-[28%] w-[37%] items-center justify-center bg-transparent font-primary-cond text-xl font-semibold uppercase text-black 2xl:text-2xl"
       >
-        Join the Playtest
+        Join
       </button>
     </form>
   );

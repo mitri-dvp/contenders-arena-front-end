@@ -41,7 +41,7 @@ const PlaytestInputSectionMobile = () => {
           height={40}
         />
         <button className="absolute left-[7%] top-[0%] flex h-[100%] w-[86%] items-center justify-center bg-transparent font-primary-cond text-xl font-semibold uppercase text-black 2xl:text-2xl">
-          Join the Playtest
+          Join
         </button>
       </div>
     </form>

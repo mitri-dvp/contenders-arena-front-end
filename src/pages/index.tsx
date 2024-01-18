@@ -7,9 +7,24 @@ import PlaytestInputDesktop from "~/components/PlaytestInputDesktop";
 import PlaytestInputSectionDesktop from "~/components/PlaytestInputSectionDesktop";
 import PlaytestInputMobile from "~/components/PlaytestInputMobile";
 import PlaytestInputSectionMobile from "~/components/PlaytestInputSectionMobile";
-import Video from "~/components/Video";
+import VideoOne from "~/components/VideoOne";
+import { useState } from "react";
+import GladiatorCardsDesktop from "~/components/GladiatorCardsDesktop";
+import CookiesModal from "~/components/CookieModal";
+import VideoTwo from "~/components/VideoTwo";
 
 export default function Home() {
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const slidePrev = () => {
+    if (activeIndex === 1) return setActiveIndex(-1);
+    setActiveIndex(activeIndex + 1);
+  };
+  const slideNext = () => {
+    if (activeIndex === -1) return setActiveIndex(1);
+    setActiveIndex(activeIndex - 1);
+  };
+
   return (
     <>
       <Head>
@@ -32,10 +47,20 @@ export default function Home() {
             <Link href={"#striker"}>More</Link>
             <Link
               href={"#playtest"}
-              className="flex h-14 items-center bg-button bg-contain bg-center bg-no-repeat px-4 font-primary-cond font-semibold text-black xl:px-8 xl:text-2xl"
+              className="flex h-14 items-center bg-button bg-contain bg-center bg-no-repeat px-12 font-primary-cond font-semibold text-black xl:px-16 xl:text-2xl"
             >
-              Join the Playtest
+              Join
             </Link>
+            <div className="relative">
+              <div className="text-sm text-green-primary">From:</div>
+              <Image
+                className="w-[150px]"
+                src={"/assets/svg/gamecan-logo.svg"}
+                alt="gamecan-logo.svg"
+                width={300}
+                height={100}
+              />
+            </div>
           </ul>
         </nav>
         <nav className="relative  w-full md:hidden">
@@ -148,7 +173,7 @@ export default function Home() {
           </div>
         </section>
         <section id="video">
-          <Video />
+          <VideoOne />
         </section>
         <section className="relative" id="community">
           <div className="hidden md:block">
@@ -176,9 +201,9 @@ export default function Home() {
                 </Link>
                 <Link
                   href={"#playtest"}
-                  className="flex h-16 items-center bg-button bg-contain bg-center bg-no-repeat px-8 font-primary-cond text-xl font-semibold uppercase text-black"
+                  className="flex h-16 items-center bg-button bg-contain bg-center bg-no-repeat px-12 font-primary-cond text-xl font-semibold uppercase text-black"
                 >
-                  Join the Playtest
+                  Wishlist Now!
                 </Link>
               </div>
             </div>
@@ -203,7 +228,11 @@ export default function Home() {
               quality={100}
             />
 
-            <GladiatorGalleryDesktop />
+            <GladiatorGalleryDesktop
+              activeIndex={activeIndex}
+              slidePrev={slidePrev}
+              slideNext={slideNext}
+            />
           </div>
           <div className="relative md:hidden">
             <div className="absolute w-full">
@@ -285,67 +314,11 @@ export default function Home() {
         </section>
         <section id="striker">
           <div className="hidden md:block">
-            <div className="absolute mx-auto flex w-full justify-between px-[5%] pt-[5%]">
-              <div className="relative z-10 aspect-[619/819] w-full bg-corporate-gunn bg-cover">
-                <Image
-                  className="mx-auto mt-[20%] w-[40%] 2xl:mt-[25%]"
-                  src={"/assets/svg/corporate-gunn.svg"}
-                  alt="corporate-gunn.svg"
-                  width={284}
-                  height={184}
-                  draggable={false}
-                  quality={100}
-                />
-                <h1 className="mt-[10%] text-center font-owners-wide text-2xl font-bold uppercase text-green-primary xl:text-3xl 2xl:mt-[12%] 2xl:text-4xl ">
-                  GUNN <br />
-                  INDUSTRIES
-                </h1>
-                <p className="mt-[3%] text-center font-primary-cond text-base font-light uppercase text-white xl:text-xl 2xl:text-2xl">
-                  GUNN gladiators are built to <br /> withstand attacks and
-                  inflict maximum <br /> damage. They may not be as agile as
-                  <br /> others, but they can pack a punch.
-                </p>
-              </div>
-              <div className="relative z-10 aspect-[619/819] w-full bg-corporate-vector bg-cover">
-                <Image
-                  className="mx-auto mt-[20%] w-[40%] 2xl:mt-[25%]"
-                  src={"/assets/svg/corporate-vector.svg"}
-                  alt="corporate-vector.svg"
-                  width={254}
-                  height={202}
-                  draggable={false}
-                  quality={100}
-                />
-                <h1 className="mt-[5%] text-center font-owners-wide text-2xl font-bold uppercase text-green-primary xl:text-3xl 2xl:mt-[7%] 2xl:text-4xl ">
-                  VECTOR <br />
-                  CORP.
-                </h1>
-                <p className="mt-[3%] text-center font-primary-cond text-base font-light uppercase text-white xl:text-xl 2xl:text-2xl">
-                  Vector gladiators are built for pursuit <br /> and seizure,
-                  applying superior agility
-                  <br /> and tracking capabilities.
-                </p>
-              </div>
-              <div className="relative z-10 aspect-[619/819] w-full bg-corporate-shift bg-cover">
-                <Image
-                  className="mx-auto mt-[20%] w-[40%] 2xl:mt-[25%]"
-                  src={"/assets/svg/corporate-shift.svg"}
-                  alt="corporate-shift.svg"
-                  width={326}
-                  height={196}
-                  draggable={false}
-                  quality={100}
-                />
-                <h1 className="mt-[14%] text-center font-owners-wide text-2xl font-bold uppercase text-green-primary xl:text-3xl 2xl:mt-[15%] 2xl:text-4xl ">
-                  SHIFT
-                </h1>
-                <p className="mt-[12%] text-center font-primary-cond text-base font-light uppercase text-white xl:text-xl 2xl:text-2xl">
-                  Shift gladiators are built for <br /> support. capable of
-                  self-repair <br />
-                  and protecting teammates.
-                </p>
-              </div>
-            </div>
+            <GladiatorCardsDesktop
+              activeIndex={activeIndex}
+              setActiveIndex={setActiveIndex}
+            />
+
             <Image
               className="w-full"
               src={"/assets/png/corporate-section.png"}
@@ -388,7 +361,7 @@ export default function Home() {
                   href={"#playtest"}
                   className="flex h-8 items-center bg-button bg-contain bg-center bg-no-repeat px-8 font-primary-cond text-xs font-semibold uppercase text-black"
                 >
-                  Join the Playtest
+                  Wishlist Now!
                 </Link>
               </div>
             </div>
@@ -404,47 +377,23 @@ export default function Home() {
           </div>
         </section>
         <section>
-          <div className="hidden md:block">
-            <Image
-              className="w-full"
-              src={"/assets/png/video2-section.png"}
-              alt="video2-section.png"
-              width={1920}
-              height={1702}
-              draggable={false}
-              quality={100}
-            />
-          </div>
-          <div className="relative md:hidden">
-            <Image
-              className="w-full"
-              src={"/assets/png/mobile-video.png"}
-              alt="mobile-video.png"
-              width={393}
-              height={219}
-              draggable={false}
-              quality={100}
-            />
-          </div>
+          <VideoTwo />
         </section>
         <section>
           <div className="hidden md:block">
             <div className="absolute mx-auto w-full max-w-[1472px] justify-between px-[10%] pt-[5%]">
               <h1 className="font-primary-cond text-4.5xl font-bold uppercase italic text-green-primary xl:text-5xl 2xl:left-0 2xl:text-7xl ">
-                we need you <br /> to build the ultimate
-                <br /> combat experience
+                do you have <br />
+                what it takes?
               </h1>
               <p className="mt-[1%] font-primary-cond text-xl font-light uppercase text-white 2xl:mt-[1.5%] 2xl:text-2xl 3xl:mt-[3%]">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
+                We are working with experts and the community to build the
                 <br />
-                industry. Lorem Ipsum has been the industry&apos;s standard
-                dummy
+                ultimate combat experience. If you think you've got what it
                 <br />
-                text ever since the 1500s, when an unknown printer took a galley
+                takes, join our Test-Pilot Program for insider information and
                 <br />
-                of type and scrambled it to make a type specimen book. It has
-                <br />
-                survived not only five centuries.
+                early access.
               </p>
               <div className="mt-[1%] flex gap-[2%] 2xl:mt-[1.5%] 3xl:mt-[3%]">
                 <Link
@@ -555,16 +504,40 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <footer className="flex flex-col justify-between gap-10 bg-[#08090d] py-10 md:gap-20 md:py-20">
-          <Image
-            className="mx-auto w-2/3 md:w-[400px]"
-            src={"/assets/svg/logo.svg"}
-            alt="contenders-arena-logo.svg"
-            width={400}
-            height={100}
-          />
-          <div className="flex flex-col items-center gap-10 font-primary text-xs uppercase text-zinc-300 md:flex-row md:gap-2 xl:text-base 2xl:gap-8 2xl:text-lg">
-            <div className="relative ml-auto mr-auto w-[75%] md:mr-0 md:w-1/6">
+        <footer className="flex flex-col justify-between gap-10 bg-dark-primary py-10 md:gap-20 md:py-20">
+          <div className="mx-auto flex w-full max-w-[1472px] flex-col items-center gap-10 px-[10%] md:flex-row md:justify-between md:gap-0">
+            <Image
+              src={"/assets/svg/logo.svg"}
+              alt="contenders-arena-logo.svg"
+              width={400}
+              height={100}
+            />
+            <div className="relative flex w-1/2 justify-between gap-4 md:w-[27%] md:gap-2">
+              <div>
+                <div className="font-primary text-xs text-green-primary md:text-sm">
+                  From:
+                </div>
+                <Image
+                  className="w-[200px] md:w-[150px]"
+                  src={"/assets/svg/gamecan-logo.svg"}
+                  alt="gamecan-logo.svg"
+                  width={300}
+                  height={100}
+                />
+              </div>
+              <div>
+                <Image
+                  className="mt-2.5 w-[100px] md:mt-[15%] md:w-[75px]"
+                  src={"/assets/png/gamecan-rating.png"}
+                  alt="gamecan-rating.png"
+                  width={300}
+                  height={100}
+                />
+              </div>
+            </div>
+          </div>
+          <div className="mx-auto flex w-full max-w-[1472px] flex-col items-center justify-between gap-10 px-[10%] font-primary text-xs uppercase text-zinc-300 md:flex-row md:justify-between md:gap-2 xl:text-sm 2xl:gap-8 2xl:text-sm">
+            <div className="relative w-5/6 md:w-1/3">
               <Image
                 className="w-full"
                 src={"/assets/svg/footer-socials.svg"}
@@ -575,45 +548,53 @@ export default function Home() {
               <div className="absolute left-0 top-0 flex h-full w-full justify-between gap-[2%] px-[5%]">
                 <Link
                   href={"https://www.tiktok.com/@contendersarena"}
-                  className="block h-full w-full "
+                  className="block h-full w-full"
                 />
                 <Link
                   href={"https://twitter.com/contendersarena"}
-                  className="block h-full w-full "
+                  className="block h-full w-full"
                 />
                 <Link
                   href={"https://www.youtube.com/@ContendersArena"}
-                  className="block h-full w-full "
+                  className="block h-full w-full"
                 />
                 <Link
                   href={"https://www.facebook.com/contendersarena"}
-                  className="block h-full w-full "
+                  className="block h-full w-full"
                 />
                 <Link
                   href={"https://www.instagram.com/contendersarena/"}
-                  className="block h-full w-full "
+                  className="block h-full w-full"
                 />
-                <Link href={"#"} className="block h-full w-full " />
+                <Link href={"#"} className="block h-full w-full" />
                 <Link
                   href={
                     "https://www.twitch.tv/directory/category/contenders-arena"
                   }
-                  className="block h-full w-full "
+                  className="block h-full w-full"
+                />
+                <Link
+                  href={"https://discord.com/invite/contenders"}
+                  className="block h-full w-full"
                 />
               </div>
             </div>
-            <div className="w-full md:w-1/3">
-              <ul className="flex flex-col justify-around gap-4 text-center font-light md:flex-row md:gap-0 md:text-left">
-                <Link href={"#"}>Privacy Policy</Link>
+            <div className="w-max">
+              <ul className="flex flex-col justify-around gap-4 text-center font-light md:flex-row md:gap-4 md:text-left">
+                <Link href={"https://galaxyracer.gg/privacy-policy/"}>
+                  Privacy Policy
+                </Link>
                 <Link href={"https://careers.gamecan.eu/"}>Carrers</Link>
                 <Link href={"#"}>Terms and Conditions</Link>
               </ul>
             </div>
-            <div className="w-full text-center font-light text-green-primary md:w-1/3 md:text-left">
+            <div className="w-max text-center font-light text-green-primary md:text-right">
               &copy; 2023 Galaxy Racer. All Rights Reserved
             </div>
           </div>
         </footer>
+
+        <CookiesModal />
       </main>
     </>
   );

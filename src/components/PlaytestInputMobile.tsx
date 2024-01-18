@@ -22,7 +22,7 @@ const PlaytestInputMobile = () => {
         placeholder="EMAIL ADDRESS"
       />
       <button className="absolute bottom-[5%] right-[1%] h-[85%] w-[49%] items-center justify-center  bg-transparent font-primary-cond text-sm font-semibold uppercase text-black">
-        Join the Playtest
+        Join
       </button>
     </form>
   );
