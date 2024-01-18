@@ -37,8 +37,8 @@ const CookiesModal = () => {
             </Link>
             .
             <br />
-            Use the "Accept" button to consent. use the "Reject" button or close
-            this notice without accepting. .
+            Use the &quot;Accept&quot; button to consent. use the
+            &quot;Reject&quot; button or close this notice without accepting.
           </Dialog.Description>
           <div className="mt-[25px] flex justify-end gap-4">
             <button

@@ -10,7 +10,7 @@ import PlaytestInputSectionMobile from "~/components/PlaytestInputSectionMobile"
 import VideoOne from "~/components/VideoOne";
 import { useState } from "react";
 import GladiatorCardsDesktop from "~/components/GladiatorCardsDesktop";
-import CookiesModal from "~/components/CookieModal";
+import CookiesModal from "~/components/CookiesModal";
 import VideoTwo from "~/components/VideoTwo";
 
 export default function Home() {
@@ -389,7 +389,7 @@ export default function Home() {
               <p className="mt-[1%] font-primary-cond text-xl font-light uppercase text-white 2xl:mt-[1.5%] 2xl:text-2xl 3xl:mt-[3%]">
                 We are working with experts and the community to build the
                 <br />
-                ultimate combat experience. If you think you've got what it
+                ultimate combat experience. If you think you&apos;ve got what it
                 <br />
                 takes, join our Test-Pilot Program for insider information and
                 <br />
