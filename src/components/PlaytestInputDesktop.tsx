@@ -11,12 +11,14 @@ const PlaytestInputDesktop = ({
   const [email, setEmail] = useState("");
   const [loading, setLoading] = useState(false);
 
-  const onSubmit = async () => {
+  const onSubmit = () => {
     if (loading) return;
     if (!validateEmail(email)) return;
 
     setLoading(true);
-    setEmailReponse(await joinPlaytest(email));
+    joinPlaytest(email)
+      .then((value) => setEmailReponse(value))
+      .catch((err) => console.log(err));
     setLoading(false);
   };
 

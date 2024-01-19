@@ -15,11 +15,6 @@ export const joinPlaytest = async (email: string): Promise<EmailResponse> => {
       headers: { "Content-Type": "multipart/form-data" },
     });
 
-    console.log({
-      data: res.data,
-      status: res.status,
-    });
-
     return { success: true, message: "You've successfully joined the list!" };
   } catch (error) {
     const err = error as AxiosError;

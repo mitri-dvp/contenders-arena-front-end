@@ -9,9 +9,8 @@ const EmailModal = ({ emailResponse }: { emailResponse: EmailResponse }) => {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    if (emailResponse.success || emailResponse.error) {
-      setOpen(true);
-    }
+    if (emailResponse.success) setOpen(true);
+    if (emailResponse.error) setOpen(true);
   }, [emailResponse]);
 
   return (
@@ -20,8 +19,8 @@ const EmailModal = ({ emailResponse }: { emailResponse: EmailResponse }) => {
         <Dialog.Overlay className="fixed inset-0 z-50 bg-black bg-opacity-25 data-[state=open]:animate-overlayShow" />
         <Dialog.Content className="fixed left-[50%] top-[50%] z-50 max-h-[85vh] w-[90vw] max-w-[450px] translate-x-[-50%] translate-y-[-50%] rounded-[6px] border border-green-primary bg-dark-secondary p-[25px] font-primary-cond text-xl text-green-primary shadow-[hsl(206_22%_7%_/_35%)_0px_10px_38px_-10px,_hsl(206_22%_7%_/_20%)_0px_10px_20px_-15px] focus:outline-none data-[state=open]:animate-contentShow">
           <Dialog.Title className="text-mauve12 m-0 text-2xl font-medium">
-            {emailResponse.success && "Success!"}
-            {emailResponse.error && "Error"}
+            {emailResponse.success ? "Success!" : ""}
+            {emailResponse.error ? "Error" : ""}
           </Dialog.Title>
           <Dialog.Description className=" mb-5 mt-[10px] text-base leading-normal">
             {emailResponse.message}
