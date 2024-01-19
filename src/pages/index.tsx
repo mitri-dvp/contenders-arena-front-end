@@ -599,7 +599,9 @@ export default function Home() {
                   Privacy Policy
                 </Link>
                 <Link href={"https://careers.gamecan.eu/"}>Carrers</Link>
-                <Link href={"#"}>Terms and Conditions</Link>
+                <Link href={"/assets/docs/terms-and-conditions.pdf"}>
+                  Terms and Conditions
+                </Link>
               </ul>
             </div>
             <div className="w-max text-center font-light text-green-primary md:text-right">
