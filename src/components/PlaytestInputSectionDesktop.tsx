@@ -1,12 +1,22 @@
 import React, { useState } from "react";
 import { validateEmail } from "~/utils/email";
-import { joinPlaytest } from "~/utils/playtest";
+import { EmailResponse, joinPlaytest } from "~/utils/playtest";
+import LoadingSpinner from "./LoadingSpinner";
 
-const PlaytestInputSectionDesktop = () => {
+const PlaytestInputSectionDesktop = ({
+  setEmailReponse,
+}: {
+  setEmailReponse: (emailResponse: EmailResponse) => void;
+}) => {
   const [email, setEmail] = useState("");
+  const [loading, setLoading] = useState(false);
+  const onSubmit = async () => {
+    if (loading) return;
+    if (!validateEmail(email)) return;
 
-  const onSubmit = () => {
-    if (validateEmail(email)) joinPlaytest(email);
+    setLoading(true);
+    setEmailReponse(await joinPlaytest(email));
+    setLoading(false);
   };
 
   return (
@@ -25,7 +35,13 @@ const PlaytestInputSectionDesktop = () => {
         />
       </div>
       <button className="flex w-full translate-y-[5%] scale-[1.075] items-center justify-center bg-button bg-contain bg-no-repeat font-primary-cond text-xl font-semibold uppercase text-black 2xl:text-2xl">
-        <span className="-translate-y-[8%]">Join</span>
+        <span className="-translate-y-[8%]">
+          {loading ? (
+            <LoadingSpinner className="h-6 w-6 animate-spin fill-dark-primary text-white xl:h-8 xl:w-8" />
+          ) : (
+            "Join"
+          )}
+        </span>
       </button>
     </form>
   );

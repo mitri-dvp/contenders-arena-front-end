@@ -1,6 +1,9 @@
+import { useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
+
+import GladiatorCardsDesktop from "~/components/GladiatorCardsDesktop";
 import GladiatorGalleryDesktop from "~/components/GladiatorGalleryDesktop";
 import GladiatorGalleryMobile from "~/components/GladiatorGalleryMobile";
 import PlaytestInputDesktop from "~/components/PlaytestInputDesktop";
@@ -8,12 +11,13 @@ import PlaytestInputSectionDesktop from "~/components/PlaytestInputSectionDeskto
 import PlaytestInputMobile from "~/components/PlaytestInputMobile";
 import PlaytestInputSectionMobile from "~/components/PlaytestInputSectionMobile";
 import VideoOne from "~/components/VideoOne";
-import { useState } from "react";
-import GladiatorCardsDesktop from "~/components/GladiatorCardsDesktop";
-import CookiesModal from "~/components/CookiesModal";
 import VideoTwo from "~/components/VideoTwo";
+import CookiesModal from "~/components/CookiesModal";
+import EmailModal from "~/components/EmailModal";
+import { EmailResponse } from "~/utils/playtest";
 
 export default function Home() {
+  // Slides
   const [activeIndex, setActiveIndex] = useState(0);
 
   const slidePrev = () => {
@@ -24,6 +28,13 @@ export default function Home() {
     if (activeIndex === -1) return setActiveIndex(1);
     setActiveIndex(activeIndex - 1);
   };
+
+  // Email
+  const [emailReponse, setEmailReponse] = useState<EmailResponse>({
+    message: "",
+    success: false,
+    error: false,
+  });
 
   return (
     <>
@@ -145,7 +156,7 @@ export default function Home() {
                   draggable={false}
                   quality={100}
                 />
-                <PlaytestInputDesktop />
+                <PlaytestInputDesktop setEmailReponse={setEmailReponse} />
               </div>
             </div>
           </div>
@@ -166,7 +177,7 @@ export default function Home() {
                     width={300}
                     height={100}
                   />
-                  <PlaytestInputMobile />
+                  <PlaytestInputMobile setEmailReponse={setEmailReponse} />
                 </div>
               </div>
             </div>
@@ -470,7 +481,7 @@ export default function Home() {
               <p className="mt-[2%] text-center font-primary-cond text-4xl font-light uppercase text-white xl:text-4.5xl 2xl:mt-[7%] 2xl:text-5.5xl">
                 A NEW CLASS OF GLADIATORS ARE READY FOR THEIR ARENA!
               </p>
-              <PlaytestInputSectionDesktop />
+              <PlaytestInputSectionDesktop setEmailReponse={setEmailReponse} />
             </div>
 
             <Image
@@ -500,7 +511,7 @@ export default function Home() {
               <p className="absolute top-[35%] w-full text-center font-primary-cond text-lg font-light uppercase text-white">
                 A NEW CLASS OF GLADIATORS ARE READY FOR THEIR ARENA!
               </p>
-              <PlaytestInputSectionMobile />
+              <PlaytestInputSectionMobile setEmailReponse={setEmailReponse} />
             </div>
           </div>
         </section>
@@ -566,7 +577,10 @@ export default function Home() {
                   href={"https://www.instagram.com/contendersarena/"}
                   className="block h-full w-full"
                 />
-                <Link href={"#"} className="block h-full w-full" />
+                <Link
+                  href={"https://www.reddit.com/r/contendersuniverse/"}
+                  className="block h-full w-full"
+                />
                 <Link
                   href={
                     "https://www.twitch.tv/directory/category/contenders-arena"
@@ -595,6 +609,7 @@ export default function Home() {
         </footer>
 
         <CookiesModal />
+        <EmailModal emailResponse={emailReponse} />
       </main>
     </>
   );

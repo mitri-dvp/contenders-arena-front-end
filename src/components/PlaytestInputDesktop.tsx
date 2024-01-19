@@ -1,12 +1,23 @@
 import React, { useState } from "react";
 import { validateEmail } from "~/utils/email";
-import { joinPlaytest } from "~/utils/playtest";
+import { EmailResponse, joinPlaytest } from "~/utils/playtest";
+import LoadingSpinner from "./LoadingSpinner";
 
-const PlaytestInputDesktop = () => {
+const PlaytestInputDesktop = ({
+  setEmailReponse,
+}: {
+  setEmailReponse: (emailResponse: EmailResponse) => void;
+}) => {
   const [email, setEmail] = useState("");
+  const [loading, setLoading] = useState(false);
 
-  const onSubmit = () => {
-    if (validateEmail(email)) joinPlaytest(email);
+  const onSubmit = async () => {
+    if (loading) return;
+    if (!validateEmail(email)) return;
+
+    setLoading(true);
+    setEmailReponse(await joinPlaytest(email));
+    setLoading(false);
   };
 
   return (
@@ -26,7 +37,11 @@ const PlaytestInputDesktop = () => {
         typeof="submit"
         className="absolute left-[43.3%] top-[2%] flex h-[28%] w-[37%] items-center justify-center bg-transparent font-primary-cond text-xl font-semibold uppercase text-black 2xl:text-2xl"
       >
-        Join
+        {loading ? (
+          <LoadingSpinner className="h-5 w-5 animate-spin fill-dark-primary text-white xl:h-8 xl:w-8" />
+        ) : (
+          "Join"
+        )}
       </button>
     </form>
   );

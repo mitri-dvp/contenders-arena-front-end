@@ -1,12 +1,23 @@
 import React, { useState } from "react";
 import { validateEmail } from "~/utils/email";
-import { joinPlaytest } from "~/utils/playtest";
+import { EmailResponse, joinPlaytest } from "~/utils/playtest";
+import LoadingSpinner from "./LoadingSpinner";
 
-const PlaytestInputMobile = () => {
+const PlaytestInputMobile = ({
+  setEmailReponse,
+}: {
+  setEmailReponse: (emailResponse: EmailResponse) => void;
+}) => {
   const [email, setEmail] = useState("");
+  const [loading, setLoading] = useState(false);
 
-  const onSubmit = () => {
-    if (validateEmail(email)) joinPlaytest(email);
+  const onSubmit = async () => {
+    if (loading) return;
+    if (!validateEmail(email)) return;
+
+    setLoading(true);
+    setEmailReponse(await joinPlaytest(email));
+    setLoading(false);
   };
 
   return (
@@ -22,7 +33,11 @@ const PlaytestInputMobile = () => {
         placeholder="EMAIL ADDRESS"
       />
       <button className="absolute bottom-[5%] right-[1%] h-[85%] w-[49%] items-center justify-center  bg-transparent font-primary-cond text-sm font-semibold uppercase text-black">
-        Join
+        {loading ? (
+          <LoadingSpinner className="absolute left-[25%] top-[25%] h-[50%] w-[50%]  animate-spin fill-dark-primary text-white xl:h-8 xl:w-8" />
+        ) : (
+          "Join"
+        )}
       </button>
     </form>
   );

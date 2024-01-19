@@ -1,13 +1,24 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import { validateEmail } from "~/utils/email";
-import { joinPlaytest } from "~/utils/playtest";
+import { EmailResponse, joinPlaytest } from "~/utils/playtest";
+import LoadingSpinner from "./LoadingSpinner";
 
-const PlaytestInputSectionMobile = () => {
+const PlaytestInputSectionMobile = ({
+  setEmailReponse,
+}: {
+  setEmailReponse: (emailResponse: EmailResponse) => void;
+}) => {
   const [email, setEmail] = useState("");
+  const [loading, setLoading] = useState(false);
 
-  const onSubmit = () => {
-    if (validateEmail(email)) joinPlaytest(email);
+  const onSubmit = async () => {
+    if (loading) return;
+    if (!validateEmail(email)) return;
+
+    setLoading(true);
+    setEmailReponse(await joinPlaytest(email));
+    setLoading(false);
   };
 
   return (
@@ -41,7 +52,11 @@ const PlaytestInputSectionMobile = () => {
           height={40}
         />
         <button className="absolute left-[7%] top-[0%] flex h-[100%] w-[86%] items-center justify-center bg-transparent font-primary-cond text-xl font-semibold uppercase text-black 2xl:text-2xl">
-          Join
+          {loading ? (
+            <LoadingSpinner className="h-6 w-6 animate-spin fill-dark-primary text-white" />
+          ) : (
+            "Join"
+          )}
         </button>
       </div>
     </form>
