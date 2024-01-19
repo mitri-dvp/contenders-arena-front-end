@@ -21,9 +21,9 @@ export const joinPlaytest = async (email: string): Promise<EmailResponse> => {
     });
 
     return { success: true, message: "You've successfully joined the list!" };
-  } catch (error: any) {
-    if (error.isAxiosError) {
-      const err = error as AxiosError;
+  } catch (error) {
+    const err = error as AxiosError;
+    if (err.isAxiosError) {
       return {
         error: true,
         message: "An error has occurred, try again",
