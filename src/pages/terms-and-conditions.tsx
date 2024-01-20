@@ -93,13 +93,13 @@ export default function TermsAndConditions() {
               Terms and Conditions
             </h1>
             <p>
-              These terms and conditions (the "Terms") apply to your use of
-              Contenders Arena (the “Game"), developed and published by
-              Contenders Universe (the “Company"). Please read these Terms
-              carefully as by installing, accessing, or using the Game, you
-              agree to be bound by these Terms. If you do not agree to these
-              Terms, please refrain from installing, accessing, or using the
-              Game.
+              These terms and conditions (the &quot;Terms&quot;) apply to your
+              use of Contenders Arena (the &quot;Game&quot;), developed and
+              published by Contenders Universe (the &quot;Company&quot;). Please
+              read these Terms carefully as by installing, accessing, or using
+              the Game, you agree to be bound by these Terms. If you do not
+              agree to these Terms, please refrain from installing, accessing,
+              or using the Game.
             </p>
             <h1 className="my-10  font-primary-cond text-4xl font-bold uppercase italic text-green-primary">
               License and Use of the Game
@@ -147,8 +147,8 @@ export default function TermsAndConditions() {
             </h1>
             <p>
               The Game may allow you to create, upload, or share user-generated
-              content ("User Content"). You retain ownership of your User
-              Content, but you grant the Company a worldwide, royalty-free,
+              content (&quot;User Content&quot;). You retain ownership of your
+              User Content, but you grant the Company a worldwide, royalty-free,
               non-exclusive license to use, reproduce, modify, adapt, publish,
               translate, and distribute your User Content in connection with the
               Game. You agree not to create, upload, or share any User Content
@@ -169,7 +169,7 @@ export default function TermsAndConditions() {
               privacy of other players and not share any personal information
               without their consent. Recording, streaming, or sharing in-game
               interactions must be done responsibly and with full respect for
-              others' rights.
+              others&apos; rights.
             </p>
             <h1 className="my-10  font-primary-cond text-4xl font-bold uppercase italic text-green-primary">
               Intellectual Property
@@ -194,9 +194,9 @@ export default function TermsAndConditions() {
               The Company reserves the right to update, modify, or discontinue
               the Game at any time. You understand that certain updates may be
               required to continue using the Game. The Company may provide
-              notice of updates through the Game's interface, website, or other
-              communication channels. However, it is your responsibility to
-              regularly check for updates and modifications. Updates and
+              notice of updates through the Game&apos;s interface, website, or
+              other communication channels. However, it is your responsibility
+              to regularly check for updates and modifications. Updates and
               modifications to the Game may affect your User Content, including
               compatibility and accessibility. The Company is not responsible
               for any loss or modification of User Content resulting from
@@ -215,14 +215,14 @@ export default function TermsAndConditions() {
               Disclaimer of Warranty:
             </h1>
             <p>
-              The Game is provided "as is" without any warranties, express or
-              implied. The Company does not guarantee the accuracy, reliability,
-              or availability of the Game. You use the Game at your own risk.
-              You acknowledge that your use of the Game is solely at your own
-              risk. The Company does not warrant that the Game will be
+              The Game is provided &quot;as is&quot; without any warranties,
+              express or implied. The Company does not guarantee the accuracy,
+              reliability, or availability of the Game. You use the Game at your
+              own risk. You acknowledge that your use of the Game is solely at
+              your own risk. The Company does not warrant that the Game will be
               error-free, uninterrupted, or free of viruses or other harmful
               components. The Company furthermore does not guarantee that the
-              Game's functionality, features, or performance will meet your
+              Game&apos;s functionality, features, or performance will meet your
               expectations or requirements. The Company does not warrant the
               accuracy, completeness, or reliability of any content within the
               Game. Any reliance on such content is at your own discretion. The

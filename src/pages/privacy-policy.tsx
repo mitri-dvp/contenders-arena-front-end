@@ -127,16 +127,16 @@ export default function TermsAndConditions() {
                         to enable certain features, you may have the option to
                         link an account on a third-party website, application,
                         or platform, such as a social media platform, Steam,
-                        PlayStation™ Network, Xbox, etc. (each a “Third-Party
-                        Platform”) with the Game. When you do so, we will
-                        receive information from that Third-Party Platform, such
-                        as your Platform ID or username and other usage
-                        statistics. Third-Party Platforms are not controlled by
-                        us and their collection and usage of personal data is
-                        subject to their respective privacy policies. We may
-                        obtain additional information about you from the
-                        Third-Party Platforms, depending on your privacy
-                        settings.
+                        PlayStation™ Network, Xbox, etc. (each a
+                        &quot;Third-Party Platform&quot;) with the Game. When
+                        you do so, we will receive information from that
+                        Third-Party Platform, such as your Platform ID or
+                        username and other usage statistics. Third-Party
+                        Platforms are not controlled by us and their collection
+                        and usage of personal data is subject to their
+                        respective privacy policies. We may obtain additional
+                        information about you from the Third-Party Platforms,
+                        depending on your privacy settings.
                       </li>
                       <li>
                         - Communications and Surveys: We may collect personal
@@ -157,7 +157,7 @@ export default function TermsAndConditions() {
                       <li>
                         - Gameplay Data: We collect data about your interactions
                         with the Game, including your progress, achievements,
-                        gameplay patterns, and preferences.{" "}
+                        gameplay patterns, and preferences.
                       </li>
                       <li>
                         - Device Information: We collect information about the
@@ -188,8 +188,8 @@ export default function TermsAndConditions() {
             We use the collected information for the following purposes:
             <ul className="ml-5">
               <li>
-                • Providing and improving the Game's functionality, features,
-                and content.{" "}
+                • Providing and improving the Game&apos;s functionality,
+                features, and content.
               </li>
 
               <li>
@@ -225,8 +225,8 @@ export default function TermsAndConditions() {
                 a) Third-party service providers who assist in Game operations,
                 analytics, and customer support such as: service providers,
                 business partners, advertising partners, third-party Application
-                Program Interfaces (“APIs”) and Software Development Kits
-                (“SDKs”).
+                Program Interfaces (&quot;APIs&quot;) and Software Development
+                Kits (&quot;SDKs&quot;).
               </li>
               <li>
                 b) Legal authorities if required by law or in response to legal
@@ -255,8 +255,8 @@ export default function TermsAndConditions() {
               6- Your Choice and Control
             </h1>
             You may access, update, or delete certain personal information
-            within the Game's settings. You can also manage your settings and
-            your communication preferences and opt-out of certain
+            within the Game&apos;s settings. You can also manage your settings
+            and your communication preferences and opt-out of certain
             communications.
             <h1 className="my-10  font-primary-cond text-4xl font-bold uppercase italic text-green-primary">
               7- Retention of the Information
