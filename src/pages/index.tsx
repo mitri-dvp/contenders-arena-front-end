@@ -40,8 +40,15 @@ export default function Home() {
     <>
       <Head>
         <title>Contenders Arena</title>
-        <meta name="description" content="DESCRIPTION" />
-        <link rel="icon" href="ICON" />
+        <meta
+          name="description"
+          content="Contenders: Arena is an exhilarating 3v3 shooter that takes you into a world of fast-paced action, strategic gameplay, and thrilling competition. Become the skilled pilot of a new kind of gladiator and prepare to engage in intense battles unlike anything you've experienced before!"
+        />
+        <meta
+          name="keywords"
+          content="contenders, contenders arena, Gamecan, galaxy racer, contenders steam, contenders arena steam, contenders arena beta, contenders steam nextfest"
+        />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
       <header className="absolute z-20 w-full">
         <nav className="mx-auto hidden w-full max-w-[1472px] justify-between px-8 pt-16 md:flex">
@@ -595,13 +602,9 @@ export default function Home() {
             </div>
             <div className="w-max">
               <ul className="flex flex-col justify-around gap-4 text-center font-light md:flex-row md:gap-4 md:text-left">
-                <Link href={"https://galaxyracer.gg/privacy-policy/"}>
-                  Privacy Policy
-                </Link>
+                <Link href={"/privacy-policy"}>Privacy Policy</Link>
                 <Link href={"https://careers.gamecan.eu/"}>Carrers</Link>
-                <Link href={"/assets/docs/terms-and-conditions.pdf"}>
-                  Terms and Conditions
-                </Link>
+                <Link href={"/terms-and-conditions"}>Terms and Conditions</Link>
               </ul>
             </div>
             <div className="w-max text-center font-light text-green-primary md:text-right">
