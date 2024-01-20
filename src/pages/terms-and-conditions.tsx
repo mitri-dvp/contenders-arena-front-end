@@ -88,7 +88,7 @@ export default function TermsAndConditions() {
       </header>
       <main className="min-h-screen w-[100vw] overflow-hidden bg-dark-primary">
         <section>
-          <div className="mx-auto w-full max-w-[1472px] justify-between px-[10%] pt-[10%] text-green-primary">
+          <div className="mx-auto w-full max-w-[1472px] justify-between px-[10%] pt-48 text-green-primary">
             <h1 className="mb-10 text-center font-primary-cond text-5xl font-bold uppercase italic text-green-primary">
               Terms and Conditions
             </h1>
