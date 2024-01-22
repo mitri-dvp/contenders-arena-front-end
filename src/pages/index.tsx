@@ -355,9 +355,6 @@ export default function Home() {
           />
         </div>
         <section>
-          <VideoTwo />
-        </section>
-        <section>
           <div className="hidden md:block">
             <div className="absolute mx-auto w-full max-w-[1472px] justify-between px-[10%] pt-[5%]">
               <h1 className="font-primary-cond text-4.5xl font-bold uppercase italic text-green-primary xl:text-5xl 2xl:left-0 2xl:text-7xl ">
