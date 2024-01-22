@@ -3,6 +3,9 @@ import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 
+import MobileNav from "~/components/MobileNav";
+import DesktopNav from "~/components/DesktopNav";
+
 import GladiatorCardsDesktop from "~/components/GladiatorCardsDesktop";
 import GladiatorGalleryDesktop from "~/components/GladiatorGalleryDesktop";
 import GladiatorGalleryMobile from "~/components/GladiatorGalleryMobile";
@@ -51,53 +54,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <header className="absolute z-20 w-full">
-        <nav className="mx-auto hidden w-full max-w-[1472px] justify-between px-8 pt-16 md:flex">
-          <Image
-            src={"/assets/svg/logo.svg"}
-            alt="contenders-arena-logo.svg"
-            width={300}
-            height={100}
-          />
-
-          <ul className="flex items-center gap-4 font-primary text-lg font-light uppercase text-white xl:text-xl 2xl:gap-8">
-            <Link href={"#video"}>Gameplay</Link>
-            <Link href={"#community"}>Community</Link>
-            <Link href={"#striker"}>More</Link>
-            <Link
-              href={"#playtest"}
-              className="flex h-14 items-center bg-button bg-contain bg-center bg-no-repeat px-12 font-primary-cond font-semibold text-black xl:px-16 xl:text-2xl"
-            >
-              Join
-            </Link>
-            <div className="relative">
-              <div className="text-sm text-green-primary">From:</div>
-              <Image
-                className="w-[150px]"
-                src={"/assets/svg/gamecan-logo.svg"}
-                alt="gamecan-logo.svg"
-                width={300}
-                height={100}
-              />
-            </div>
-          </ul>
-        </nav>
-        <nav className="relative  w-full md:hidden">
-          <Image
-            className="mx-auto w-1/2 pt-8"
-            src={"/assets/svg/logo.svg"}
-            alt="contenders-arena-logo.svg"
-            width={300}
-            height={100}
-          />
-
-          <Image
-            className="absolute right-8 top-8 mx-auto w-8 cursor-pointer"
-            src={"/assets/svg/mobile-menu.svg"}
-            alt="mobile-menu.svg"
-            width={32}
-            height={32}
-          />
-        </nav>
+        <DesktopNav />
+        <MobileNav />
       </header>
       <main className="min-h-screen w-[100vw] overflow-hidden">
         <section className="w-full">
@@ -128,7 +86,7 @@ export default function Home() {
                 of gladiators
               </h1>
               <h1 className="relative left-[15%] top-[25%] z-10 mx-auto w-full max-w-[1150px] translate-x-[64px] translate-y-[16px] font-primary-cond text-4xl font-extrabold uppercase italic text-white xl:left-[10%] 2xl:left-[5%] 2xl:text-6xl 3xl:left-0">
-                are ready for
+                are you ready for
                 <br />
                 <Link href={"#video"}>
                   <Image
@@ -193,6 +151,51 @@ export default function Home() {
         <section id="video">
           <VideoOne />
         </section>
+        <section>
+          <div className="relative md:hidden">
+            <div className="absolute h-full w-full">
+              <h1 className="absolute top-[40%] w-full text-center font-primary-cond text-4xl font-bold uppercase italic leading-8 text-green-primary">
+                fast-paced action,
+                <br /> strategic gameplay,
+                <br /> thrilling competition.
+              </h1>
+              <p className="absolute top-[66%] w-full text-center font-primary-cond text-sm font-light leading-4 text-white ">
+                Contenders: Arena is an exhilarating 3v3 shooter that takes you
+                into a world of <br /> fast-paced action, strategic gameplay,
+                and thrilling competition. Become the <br /> skilled pilot of a
+                new kind of gladiator and prepare to engage in intense <br />
+                battles unlike anything you&apos;ve experienced before!
+              </p>
+              <div className="absolute top-[85%] flex w-full justify-between px-7">
+                <Link
+                  href={
+                    "https://store.steampowered.com/app/2445510/Contenders_Arena/"
+                  }
+                  className="flex h-8 w-max items-center bg-button-steam bg-contain bg-center bg-no-repeat pl-4 pr-20 font-primary-cond text-xs font-light uppercase tracking-tight text-white"
+                >
+                  coming soon to
+                </Link>
+                <Link
+                  href={
+                    "https://store.steampowered.com/app/2445510/Contenders_Arena/"
+                  }
+                  className="flex h-8 items-center bg-button bg-contain bg-center bg-no-repeat px-8 font-primary-cond text-xs font-semibold uppercase text-black"
+                >
+                  Wishlist Now!
+                </Link>
+              </div>
+            </div>
+            <Image
+              className="w-full"
+              src={"/assets/png/mobile-steam-section.png"}
+              alt="mobile-steam-section.png"
+              width={393}
+              height={426}
+              draggable={false}
+              quality={100}
+            />
+          </div>
+        </section>
         <section className="relative" id="community">
           <div className="hidden md:block">
             <div className="absolute mx-auto w-full max-w-[1472px] justify-between px-[10%] pt-[10%]">
@@ -252,83 +255,6 @@ export default function Home() {
               slideNext={slideNext}
             />
           </div>
-          <div className="relative md:hidden">
-            <div className="absolute w-full">
-              <div className="relative aspect-[393/241] w-full bg-mobile-card-background bg-contain bg-no-repeat">
-                <div className="absolute h-full w-full">
-                  <Image
-                    className="ml-[9%] mt-[15%] w-[20%]"
-                    src={"/assets/svg/corporate-vector.svg"}
-                    alt="corporate-vector.svg"
-                    width={254}
-                    height={202}
-                    draggable={false}
-                    quality={100}
-                  />
-                  <h1 className="absolute left-[35%] top-[24%] font-owners-wide text-xl font-bold uppercase leading-4 text-green-primary">
-                    VECTOR <br />
-                    CORP.
-                  </h1>
-                  <p className="absolute left-[35%] top-[42%] font-primary-cond text-xs font-light uppercase leading-3 text-white">
-                    Vector gladiators are built for pursuit <br /> and seizure,
-                    applying superior agility
-                    <br /> and tracking capabilities.
-                  </p>
-                </div>
-              </div>
-              <div className="relative aspect-[393/241] w-full -translate-y-[35%] bg-mobile-card-background bg-contain bg-no-repeat">
-                <div className="absolute h-full w-full">
-                  <Image
-                    className="ml-[9%] mt-[18%] w-[20%]"
-                    src={"/assets/svg/corporate-gunn.svg"}
-                    alt="corporate-gunn.svg"
-                    width={284}
-                    height={184}
-                    draggable={false}
-                    quality={100}
-                  />
-                  <h1 className="absolute left-[35%] top-[24%] font-owners-wide text-xl font-bold uppercase leading-4 text-green-primary">
-                    GUNN <br />
-                    INDUSTRIES
-                  </h1>
-                  <p className="absolute left-[35%] top-[42%] font-primary-cond text-xs font-light uppercase leading-3 text-white">
-                    GUNN gladiators are built to withstand attacks
-                    <br /> and inflict maximum damage. They may not be as
-                    <br /> agile as others, but they can pack a punch.
-                  </p>
-                </div>
-              </div>
-              <div className="relative aspect-[393/241] w-full -translate-y-[70%] bg-mobile-card-background bg-contain bg-no-repeat">
-                <div className="absolute h-full w-full">
-                  <Image
-                    className="ml-[9%] mt-[18%] w-[20%]"
-                    src={"/assets/svg/corporate-shift.svg"}
-                    alt="corporate-shift.svg"
-                    width={326}
-                    height={196}
-                    draggable={false}
-                    quality={100}
-                  />
-                  <h1 className="absolute left-[35%] top-[24%] font-owners-wide text-xl font-bold uppercase leading-4 text-green-primary">
-                    SHIFT
-                  </h1>
-                  <p className="absolute left-[35%] top-[38%] font-primary-cond text-xs font-light uppercase leading-3 text-white">
-                    Shift gladiators are built for support. capable <br /> of
-                    self-repair and protecting teammates.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <Image
-              className="w-full"
-              src={"/assets/png/mobile-corporate-background.png"}
-              alt="mobile-corporate-background.png"
-              width={393}
-              height={510}
-              draggable={false}
-              quality={100}
-            />
-          </div>
         </section>
         <section id="striker">
           <div className="hidden md:block">
@@ -351,49 +277,83 @@ export default function Home() {
             <GladiatorGalleryMobile />
           </div>
         </section>
-        <section>
-          <div className="relative md:hidden">
-            <div className="absolute h-full w-full">
-              <h1 className="absolute top-[40%] w-full text-center font-primary-cond text-4xl font-bold uppercase italic leading-8 text-green-primary">
-                fast-paced action,
-                <br /> strategic gameplay,
-                <br /> thrilling competition.
-              </h1>
-              <p className="absolute top-[66%] w-full text-center font-primary-cond text-sm font-light leading-4 text-white ">
-                Contenders: Arena is an exhilarating 3v3 shooter that takes you
-                into a world of <br /> fast-paced action, strategic gameplay,
-                and thrilling competition. Become the <br /> skilled pilot of a
-                new kind of gladiator and prepare to engage in intense <br />
-                battles unlike anything you&apos;ve experienced before!
-              </p>
-              <div className="absolute top-[85%] flex w-full justify-between px-7">
-                <Link
-                  href={
-                    "https://store.steampowered.com/app/2445510/Contenders_Arena/"
-                  }
-                  className="flex h-8 w-max items-center bg-button-steam bg-contain bg-center bg-no-repeat pl-4 pr-20 font-primary-cond text-xs font-light uppercase tracking-tight text-white"
-                >
-                  coming soon to
-                </Link>
-                <Link
-                  href={"#playtest"}
-                  className="flex h-8 items-center bg-button bg-contain bg-center bg-no-repeat px-8 font-primary-cond text-xs font-semibold uppercase text-black"
-                >
-                  Wishlist Now!
-                </Link>
+        <div className="relative md:hidden">
+          <div className="absolute w-full">
+            <div className="relative aspect-[393/241] w-full bg-mobile-card-background bg-contain bg-no-repeat">
+              <div className="absolute h-full w-full">
+                <Image
+                  className="ml-[9%] mt-[15%] w-[20%]"
+                  src={"/assets/svg/corporate-vector.svg"}
+                  alt="corporate-vector.svg"
+                  width={254}
+                  height={202}
+                  draggable={false}
+                  quality={100}
+                />
+                <h1 className="absolute left-[35%] top-[24%] font-owners-wide text-xl font-bold uppercase leading-4 text-green-primary">
+                  VECTOR <br />
+                  CORP.
+                </h1>
+                <p className="absolute left-[35%] top-[42%] font-primary-cond text-xs font-light uppercase leading-3 text-white">
+                  Vector gladiators are built for pursuit <br /> and seizure,
+                  applying superior agility
+                  <br /> and tracking capabilities.
+                </p>
               </div>
             </div>
-            <Image
-              className="w-full"
-              src={"/assets/png/mobile-steam-section.png"}
-              alt="mobile-steam-section.png"
-              width={393}
-              height={426}
-              draggable={false}
-              quality={100}
-            />
+            <div className="relative aspect-[393/241] w-full -translate-y-[35%] bg-mobile-card-background bg-contain bg-no-repeat">
+              <div className="absolute h-full w-full">
+                <Image
+                  className="ml-[9%] mt-[18%] w-[20%]"
+                  src={"/assets/svg/corporate-gunn.svg"}
+                  alt="corporate-gunn.svg"
+                  width={284}
+                  height={184}
+                  draggable={false}
+                  quality={100}
+                />
+                <h1 className="absolute left-[35%] top-[24%] font-owners-wide text-xl font-bold uppercase leading-4 text-green-primary">
+                  GUNN <br />
+                  INDUSTRIES
+                </h1>
+                <p className="absolute left-[35%] top-[42%] font-primary-cond text-xs font-light uppercase leading-3 text-white">
+                  GUNN gladiators are built to withstand attacks
+                  <br /> and inflict maximum damage. They may not be as
+                  <br /> agile as others, but they can pack a punch.
+                </p>
+              </div>
+            </div>
+            <div className="relative aspect-[393/241] w-full -translate-y-[70%] bg-mobile-card-background bg-contain bg-no-repeat">
+              <div className="absolute h-full w-full">
+                <Image
+                  className="ml-[9%] mt-[18%] w-[20%]"
+                  src={"/assets/svg/corporate-shift.svg"}
+                  alt="corporate-shift.svg"
+                  width={326}
+                  height={196}
+                  draggable={false}
+                  quality={100}
+                />
+                <h1 className="absolute left-[35%] top-[24%] font-owners-wide text-xl font-bold uppercase leading-4 text-green-primary">
+                  SHIFT
+                </h1>
+                <p className="absolute left-[35%] top-[38%] font-primary-cond text-xs font-light uppercase leading-3 text-white">
+                  Shift gladiators are built for support. capable <br /> of
+                  self-repair and protecting teammates.
+                </p>
+              </div>
+            </div>
           </div>
-        </section>
+          <Image
+            className="w-full"
+            src={"/assets/png/mobile-corporate-background.png"}
+            alt="mobile-corporate-background.png"
+            width={393}
+            height={510}
+            draggable={false}
+            quality={100}
+          />
+        </div>
         <section>
           <VideoTwo />
         </section>
@@ -612,7 +572,6 @@ export default function Home() {
             </div>
           </div>
         </footer>
-
         <CookiesModal />
         <EmailModal emailResponse={emailReponse} />
       </main>

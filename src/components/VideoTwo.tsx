@@ -35,7 +35,7 @@ const VideoTwo = () => {
           className={`absolute top-0 aspect-[1920/1084] w-full ${
             clicked ? "block" : "hidden"
           }`}
-          src="https://www.youtube.com/embed/eawbigugTDI?autoplay=1&controls=0&rel=0"
+          src="https://www.youtube.com/embed/eawbigugTDI?autoplay=1&controls=0&rel=0&mute=1"
           frameBorder="0"
           allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; autoplay; modestbranding;"
           allowFullScreen

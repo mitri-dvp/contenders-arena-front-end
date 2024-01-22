@@ -3,6 +3,9 @@ import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 
+import MobileNav from "~/components/MobileNav";
+import DesktopNav from "~/components/DesktopNav";
+
 import CookiesModal from "~/components/CookiesModal";
 import EmailModal from "~/components/EmailModal";
 import { EmailResponse } from "~/utils/playtest";
@@ -38,53 +41,8 @@ export default function TermsAndConditions() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <header className="absolute z-20 w-full">
-        <nav className="mx-auto hidden w-full max-w-[1472px] justify-between px-8 pt-16 md:flex">
-          <Image
-            src={"/assets/svg/logo.svg"}
-            alt="contenders-arena-logo.svg"
-            width={300}
-            height={100}
-          />
-
-          <ul className="flex items-center gap-4 font-primary text-lg font-light uppercase text-white xl:text-xl 2xl:gap-8">
-            <Link href={"/#video"}>Gameplay</Link>
-            <Link href={"/#community"}>Community</Link>
-            <Link href={"/#striker"}>More</Link>
-            <Link
-              href={"/#playtest"}
-              className="flex h-14 items-center bg-button bg-contain bg-center bg-no-repeat px-12 font-primary-cond font-semibold text-black xl:px-16 xl:text-2xl"
-            >
-              Join
-            </Link>
-            <div className="relative">
-              <div className="text-sm text-green-primary">From:</div>
-              <Image
-                className="w-[150px]"
-                src={"/assets/svg/gamecan-logo.svg"}
-                alt="gamecan-logo.svg"
-                width={300}
-                height={100}
-              />
-            </div>
-          </ul>
-        </nav>
-        <nav className="relative  w-full md:hidden">
-          <Image
-            className="mx-auto w-1/2 pt-8"
-            src={"/assets/svg/logo.svg"}
-            alt="contenders-arena-logo.svg"
-            width={300}
-            height={100}
-          />
-
-          <Image
-            className="absolute right-8 top-8 mx-auto w-8 cursor-pointer"
-            src={"/assets/svg/mobile-menu.svg"}
-            alt="mobile-menu.svg"
-            width={32}
-            height={32}
-          />
-        </nav>
+        <DesktopNav />
+        <MobileNav />
       </header>
       <main className="min-h-screen w-[100vw] overflow-hidden bg-dark-primary">
         <section>
