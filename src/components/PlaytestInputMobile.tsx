@@ -31,10 +31,10 @@ const PlaytestInputMobile = ({
     >
       <input
         onChange={(e) => setEmail(e.target.value)}
-        className="absolute bottom-[20%] left-[10%] w-[40%] bg-transparent font-primary-cond text-sm text-white outline-none"
+        className="absolute bottom-[20%] left-[10%] w-[40%] bg-transparent font-primary-cond text-sm text-white outline-none sm:text-3xl md:text-4xl"
         placeholder="EMAIL ADDRESS"
       />
-      <button className="absolute bottom-[5%] right-[1%] h-[85%] w-[49%] items-center justify-center  bg-transparent font-primary-cond text-sm font-semibold uppercase text-black">
+      <button className="absolute bottom-[5%] right-[1%] h-[85%] w-[49%] items-center justify-center  bg-transparent font-primary-cond text-sm font-semibold uppercase text-black sm:text-3xl md:text-4xl">
         {loading ? (
           <LoadingSpinner className="absolute left-[25%] top-[25%] h-[50%] w-[50%]  animate-spin fill-dark-primary text-white xl:h-8 xl:w-8" />
         ) : (

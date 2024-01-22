@@ -31,7 +31,7 @@ const GladiatorCardsDesktop = ({
           quality={100}
         />
         {isDefenderActive ? (
-          <p className="mt-[9%] px-16 text-center font-primary-cond text-base font-light uppercase text-white xl:text-xl 2xl:text-xl">
+          <p className="mt-[9%] px-10 text-center font-primary-cond text-sm font-light uppercase text-white xl:px-16 xl:text-xl 2xl:text-xl">
             Originating from a coalition of mercenary groups, it has grown into
             a fiercely independent entity with significant military and economic
             prowess. Its chief aim is to forge a self-reliant and powerful
@@ -72,7 +72,7 @@ const GladiatorCardsDesktop = ({
           quality={100}
         />
         {isStrikerActive ? (
-          <p className="mt-[9%] px-16 text-center font-primary-cond text-base font-light uppercase text-white xl:text-xl 2xl:text-xl">
+          <p className="mt-[9%] px-10 text-center font-primary-cond text-sm font-light uppercase text-white xl:px-16 xl:text-xl 2xl:text-xl">
             With a focus on security, law, and order, Vector aims to impose
             stability on society, even if it comes at the cost of individual
             freedoms. They have an intense dislike for Axiom, seeing their
@@ -112,7 +112,7 @@ const GladiatorCardsDesktop = ({
           quality={100}
         />
         {isRunnerActive ? (
-          <p className="mt-[9%] px-16 text-center font-primary-cond text-base font-light uppercase text-white xl:text-xl 2xl:text-xl">
+          <p className="mt-[9%] px-10 text-center font-primary-cond text-sm font-light uppercase text-white xl:px-16 xl:text-xl 2xl:text-xl">
             Formerly known as Teradev Technology Amalgamated, Shift transformed
             its operations to emphasize societal betterment. Headquartered on
             Brontes, Shift is a leading model of corporate responsibility,

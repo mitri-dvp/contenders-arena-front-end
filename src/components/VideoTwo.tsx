@@ -8,7 +8,7 @@ const VideoTwo = () => {
   };
   return (
     <div className="relative cursor-pointer" onClick={handleClick}>
-      <div className="hidden md:block">
+      <div className="hidden lg:block">
         <Image
           className="w-full"
           src={"/assets/png/video2-section.png"}
@@ -19,7 +19,7 @@ const VideoTwo = () => {
           quality={100}
         />
       </div>
-      <div className="relative md:hidden">
+      <div className="relative lg:hidden">
         <Image
           className="w-full"
           src={"/assets/png/mobile-video.png"}

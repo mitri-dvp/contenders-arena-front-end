@@ -59,7 +59,7 @@ export default function Home() {
       </header>
       <main className="min-h-screen w-[100vw] overflow-hidden">
         <section className="w-full">
-          <div className="relative hidden md:block">
+          <div className="relative hidden lg:block">
             <Image
               className="relative w-full select-none object-contain"
               src={"/assets/png/contenders_hero_robot_1.png"}
@@ -85,7 +85,7 @@ export default function Home() {
               <h1 className="relative left-[10%] top-[25%] z-10 mx-auto w-full max-w-[1150px] font-primary-cond text-7xl font-extrabold uppercase italic text-white xl:text-8xl 2xl:left-[5%] 2xl:text-9xl 3xl:left-0">
                 of gladiators
               </h1>
-              <h1 className="relative left-[15%] top-[25%] z-10 mx-auto w-full max-w-[1150px] translate-x-[64px] translate-y-[16px] font-primary-cond text-4xl font-extrabold uppercase italic text-white xl:left-[10%] 2xl:left-[5%] 2xl:text-6xl 3xl:left-0">
+              <h1 className="relative left-[15%] top-[25%] z-10 mx-auto w-full max-w-[1150px] translate-x-[64px] translate-y-[16px] font-primary-cond text-2xl font-extrabold uppercase italic text-white lg:text-3xl xl:left-[10%] xl:text-4xl 2xl:left-[5%] 2xl:text-6xl 3xl:left-0">
                 are you ready for
                 <br />
                 <Link href={"#video"}>
@@ -125,13 +125,13 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="relative aspect-[393/350] w-full bg-mobile-hero-background bg-contain bg-no-repeat md:hidden">
+          <div className="relative aspect-[393/350] w-full bg-mobile-hero-background bg-contain bg-no-repeat lg:hidden">
             <div className="absolute bottom-8 w-full">
               <div className="relative w-full px-7">
-                <h1 className=" px-4 font-primary-cond text-4xl uppercase italic text-green-primary">
+                <h1 className="px-4 font-primary-cond text-4xl uppercase italic text-green-primary sm:text-6xl md:text-7xl">
                   a new class
                 </h1>
-                <h1 className=" px-4 text-right font-primary-cond text-4xl uppercase italic text-white">
+                <h1 className="px-4 text-right font-primary-cond text-4xl uppercase italic text-white sm:text-6xl md:text-7xl">
                   of gladiators
                 </h1>
                 <div className="relative">
@@ -152,14 +152,15 @@ export default function Home() {
           <VideoOne />
         </section>
         <section>
-          <div className="relative md:hidden">
+          <div className="relative lg:hidden">
             <div className="absolute h-full w-full">
-              <h1 className="absolute top-[40%] w-full text-center font-primary-cond text-4xl font-bold uppercase italic leading-8 text-green-primary">
+              ``{" "}
+              <h1 className="absolute top-[40%] w-full text-center font-primary-cond text-4xl font-bold uppercase italic leading-8 text-green-primary sm:text-5xl md:text-6xl">
                 fast-paced action,
                 <br /> strategic gameplay,
                 <br /> thrilling competition.
               </h1>
-              <p className="absolute top-[66%] w-full text-center font-primary-cond text-sm font-light leading-4 text-white ">
+              <p className="absolute top-[66%] w-full text-center font-primary-cond text-sm font-light leading-4 text-white sm:text-xl sm:leading-5 md:text-2xl md:leading-6">
                 Contenders: Arena is an exhilarating 3v3 shooter that takes you
                 into a world of <br /> fast-paced action, strategic gameplay,
                 and thrilling competition. Become the <br /> skilled pilot of a
@@ -171,7 +172,7 @@ export default function Home() {
                   href={
                     "https://store.steampowered.com/app/2445510/Contenders_Arena/"
                   }
-                  className="flex h-8 w-max items-center bg-button-steam bg-contain bg-center bg-no-repeat pl-4 pr-20 font-primary-cond text-xs font-light uppercase tracking-tight text-white"
+                  className="flex h-8 w-max items-center bg-button-steam bg-contain bg-center bg-no-repeat pl-4 pr-20 font-primary-cond text-xs font-light uppercase tracking-tight text-white sm:h-16 sm:pr-28 sm:text-lg"
                 >
                   coming soon to
                 </Link>
@@ -179,7 +180,7 @@ export default function Home() {
                   href={
                     "https://store.steampowered.com/app/2445510/Contenders_Arena/"
                   }
-                  className="flex h-8 items-center bg-button bg-contain bg-center bg-no-repeat px-8 font-primary-cond text-xs font-semibold uppercase text-black"
+                  className="flex h-8 items-center bg-button bg-contain bg-center bg-no-repeat px-8 font-primary-cond text-xs font-semibold uppercase text-black sm:h-16 sm:text-lg"
                 >
                   Wishlist Now!
                 </Link>
@@ -197,7 +198,7 @@ export default function Home() {
           </div>
         </section>
         <section className="relative" id="community">
-          <div className="hidden md:block">
+          <div className="hidden lg:block">
             <div className="absolute mx-auto w-full max-w-[1472px] justify-between px-[10%] pt-[10%]">
               <h1 className="font-primary-cond text-5.5xl font-bold uppercase italic text-green-primary xl:text-6xl 2xl:left-0 2xl:text-7xl ">
                 fast-paced action, <br /> strategic gameplay, <br />
@@ -257,7 +258,7 @@ export default function Home() {
           </div>
         </section>
         <section id="striker">
-          <div className="hidden md:block">
+          <div className="hidden lg:block">
             <GladiatorCardsDesktop
               activeIndex={activeIndex}
               setActiveIndex={setActiveIndex}
@@ -273,11 +274,11 @@ export default function Home() {
               quality={100}
             />
           </div>
-          <div className="relative md:hidden">
+          <div className="relative lg:hidden">
             <GladiatorGalleryMobile />
           </div>
         </section>
-        <div className="relative md:hidden">
+        <div className="relative lg:hidden">
           <div className="absolute w-full">
             <div className="relative aspect-[393/241] w-full bg-mobile-card-background bg-contain bg-no-repeat">
               <div className="absolute h-full w-full">
@@ -290,11 +291,11 @@ export default function Home() {
                   draggable={false}
                   quality={100}
                 />
-                <h1 className="absolute left-[35%] top-[24%] font-owners-wide text-xl font-bold uppercase leading-4 text-green-primary">
+                <h1 className="absolute left-[35%] top-[24%] font-owners-wide text-xl font-bold uppercase leading-4 text-green-primary sm:text-4xl sm:leading-8">
                   VECTOR <br />
                   CORP.
                 </h1>
-                <p className="absolute left-[35%] top-[42%] font-primary-cond text-xs font-light uppercase leading-3 text-white">
+                <p className="absolute left-[35%] top-[42%] font-primary-cond text-xs font-light uppercase leading-3 text-white sm:text-xl sm:leading-5">
                   Vector gladiators are built for pursuit <br /> and seizure,
                   applying superior agility
                   <br /> and tracking capabilities.
@@ -312,11 +313,11 @@ export default function Home() {
                   draggable={false}
                   quality={100}
                 />
-                <h1 className="absolute left-[35%] top-[24%] font-owners-wide text-xl font-bold uppercase leading-4 text-green-primary">
+                <h1 className="absolute left-[35%] top-[24%] font-owners-wide text-xl font-bold uppercase leading-4 text-green-primary sm:text-4xl sm:leading-8">
                   GUNN <br />
                   INDUSTRIES
                 </h1>
-                <p className="absolute left-[35%] top-[42%] font-primary-cond text-xs font-light uppercase leading-3 text-white">
+                <p className="absolute left-[35%] top-[42%] font-primary-cond text-xs font-light uppercase leading-3 text-white sm:text-xl sm:leading-5">
                   GUNN gladiators are built to withstand attacks
                   <br /> and inflict maximum damage. They may not be as
                   <br /> agile as others, but they can pack a punch.
@@ -334,10 +335,10 @@ export default function Home() {
                   draggable={false}
                   quality={100}
                 />
-                <h1 className="absolute left-[35%] top-[24%] font-owners-wide text-xl font-bold uppercase leading-4 text-green-primary">
+                <h1 className="absolute left-[35%] top-[24%] font-owners-wide text-xl font-bold uppercase leading-4 text-green-primary sm:text-4xl sm:leading-8">
                   SHIFT
                 </h1>
-                <p className="absolute left-[35%] top-[38%] font-primary-cond text-xs font-light uppercase leading-3 text-white">
+                <p className="absolute left-[35%] top-[38%] font-primary-cond text-xs font-light uppercase leading-3 text-white sm:text-xl sm:leading-5">
                   Shift gladiators are built for support. capable <br /> of
                   self-repair and protecting teammates.
                 </p>
@@ -355,7 +356,7 @@ export default function Home() {
           />
         </div>
         <section>
-          <div className="hidden md:block">
+          <div className="hidden lg:block">
             <div className="absolute mx-auto w-full max-w-[1472px] justify-between px-[10%] pt-[5%]">
               <h1 className="font-primary-cond text-4.5xl font-bold uppercase italic text-green-primary xl:text-5xl 2xl:left-0 2xl:text-7xl ">
                 do you have <br />
@@ -390,7 +391,7 @@ export default function Home() {
               quality={100}
             />
           </div>
-          <div className="relative md:hidden">
+          <div className="relative lg:hidden">
             <div>
               <Image
                 className="w-full"
@@ -404,7 +405,7 @@ export default function Home() {
             </div>
             <div className="relative">
               <Image
-                className="w-full"
+                className="h-[40vh] w-full"
                 src={"/assets/png/mobile-discord-background.png"}
                 alt="mobile-discord-background.png"
                 width={393}
@@ -413,22 +414,22 @@ export default function Home() {
                 quality={100}
               />
               <div className="absolute top-0 h-full w-full">
-                <h1 className="absolute top-[10%] w-full text-center font-primary-cond text-4xl font-bold uppercase italic leading-9 text-green-primary">
-                  WE NEED YOU
-                  <br /> to build the ultimate
-                  <br /> combate experience
+                <h1 className="absolute top-[10%] w-full text-center font-primary-cond text-4xl font-bold uppercase italic leading-9 text-green-primary sm:text-5xl md:text-6xl">
+                  do you have <br />
+                  what it takes?
                 </h1>
-                <p className="absolute top-[50%] w-full text-center font-primary-cond text-sm font-light leading-4 text-white ">
-                  Lorem Ipsum is simply dummy text of the printing and
-                  <br /> typesetting industry. Lorem Ipsum has been the
-                  industry&apos;s
-                  <br /> standard dummy text ever since the 1500s, when an
-                  unknown
-                  <br /> printer took a galley of type and scrambled it to make
-                  a type.
+                <p className="absolute top-[45%] w-full text-center font-primary-cond text-sm font-light leading-4 text-white sm:text-xl sm:leading-5 md:text-2xl md:leading-6">
+                  We are working with experts and the community to build the
+                  <br />
+                  ultimate combat experience. If you think you&apos;ve got what
+                  it
+                  <br />
+                  takes, join our Test-Pilot Program for insider information and
+                  <br />
+                  early access.
                 </p>
                 <div className="absolute top-[75%] mx-auto w-full">
-                  <button className="mx-auto flex h-16 w-max scale-75 items-center bg-button-discord bg-contain bg-center bg-no-repeat pl-20 pr-8 font-primary-cond text-xl font-bold uppercase tracking-tight text-green-primary">
+                  <button className="mx-auto flex h-16 w-max scale-75 items-center bg-button-discord bg-contain bg-center bg-no-repeat pl-20 pr-8 font-primary-cond text-xl font-bold uppercase tracking-tight text-green-primary sm:scale-100">
                     Join Discord Community
                   </button>
                 </div>
@@ -437,7 +438,7 @@ export default function Home() {
           </div>
         </section>
         <section id="playtest">
-          <div className="hidden md:block">
+          <div className="hidden lg:block">
             <div className="absolute mx-auto w-full  justify-between px-[10%] pt-[8%] 2xl:pt-[12%]">
               <h1 className="text-center font-primary-cond text-8xl font-bold uppercase italic text-green-primary xl:text-9xl 2xl:left-0 2xl:text-11xl">
                 ARE YOU READY
@@ -458,9 +459,9 @@ export default function Home() {
               quality={100}
             />
           </div>
-          <div className="relative md:hidden">
+          <div className="relative lg:hidden">
             <Image
-              className="w-full"
+              className="h-[40vh] w-full"
               src={"/assets/png/mobile-ready-background.png"}
               alt="mobile-ready-background.png"
               width={393}
@@ -469,10 +470,10 @@ export default function Home() {
               quality={100}
             />
             <div className="absolute top-0 h-full w-full">
-              <h1 className="absolute top-[15%] w-full text-center font-primary-cond text-5xl font-bold uppercase italic text-green-primary">
+              <h1 className="absolute top-[15%] w-full text-center font-primary-cond text-5xl font-bold uppercase italic text-green-primary sm:text-5xl md:text-6xl">
                 ARE YOU READY
               </h1>
-              <p className="absolute top-[35%] w-full text-center font-primary-cond text-lg font-light uppercase text-white">
+              <p className="absolute top-[35%] w-full text-center font-primary-cond text-lg font-light uppercase text-white  sm:text-xl sm:leading-5 md:text-2xl md:leading-6">
                 A NEW CLASS OF GLADIATORS ARE READY FOR THEIR ARENA!
               </p>
               <PlaytestInputSectionMobile setEmailReponse={setEmailReponse} />

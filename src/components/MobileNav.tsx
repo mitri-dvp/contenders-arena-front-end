@@ -23,7 +23,7 @@ const MobileNav = () => {
     <nav
       className={`${
         isAtTopOfPage ? "bg-transparent" : "bg-dark-primary pb-4"
-      } fixed w-full transition-all md:hidden`}
+      } fixed w-full transition-all lg:hidden`}
     >
       <Link href={"/"}>
         <Image

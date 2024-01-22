@@ -7,7 +7,7 @@ const DesktopNav = () => {
   const isHome = router.pathname === "";
 
   return (
-    <nav className="mx-auto hidden w-full max-w-[1472px] justify-between px-8 pt-16 md:flex">
+    <nav className="mx-auto hidden w-full max-w-[1472px] justify-between px-8 pt-16 lg:flex">
       <Link href={"/"}>
         <Image
           src={"/assets/svg/logo.svg"}
