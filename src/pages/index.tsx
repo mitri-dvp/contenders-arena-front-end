@@ -87,7 +87,7 @@ export default function Home() {
                 of gladiators
               </h1>
               <h1 className="relative left-[15%] top-[25%] z-10 mx-auto w-full max-w-[1150px] translate-x-[64px] translate-y-[16px] font-primary-cond text-2xl font-extrabold uppercase italic text-white lg:text-3xl xl:left-[10%] xl:text-4xl 2xl:left-[5%] 2xl:text-6xl 3xl:left-0">
-                are you ready for
+                {/* are you ready for */}
                 <br />
                 <Link href={"#video"}>
                   <Image
@@ -223,7 +223,9 @@ export default function Home() {
                   coming soon to
                 </Link>
                 <Link
-                  href={"#playtest"}
+                  href={
+                    "https://store.steampowered.com/app/2445510/Contenders_Arena/"
+                  }
                   className="flex h-16 items-center bg-button bg-contain bg-center bg-no-repeat px-12 font-primary-cond text-xl font-semibold uppercase text-black"
                 >
                   Wishlist Now!
