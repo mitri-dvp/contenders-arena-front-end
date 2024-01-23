@@ -35,7 +35,6 @@ const GladiatorGalleryMobile = ({
     if (swiper) {
       swiper.slideTo(mapActiveIndexToSwiperIndex(activeIndex));
     }
-    return () => {};
   }, [activeIndex]);
 
   return (
