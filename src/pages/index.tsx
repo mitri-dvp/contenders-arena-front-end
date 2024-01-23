@@ -366,11 +366,11 @@ export default function Home() {
                 what it takes?
               </h1>
               <p className="mt-[1%] font-primary-cond text-xl font-light uppercase text-white 2xl:mt-[1.5%] 2xl:text-2xl 3xl:mt-[3%]">
-                We are working with experts and the community to build the
+                We are working with the community to build the ultimate
                 <br />
-                ultimate combat experience. If you think you&apos;ve got what it
+                combat experience. If you think you&apos;ve got what it takes,
                 <br />
-                takes, join our Test-Pilot Program for insider information and
+                join our Test-Pilot Program for insider information and
                 <br />
                 early access.
               </p>
@@ -422,12 +422,11 @@ export default function Home() {
                   what it takes?
                 </h1>
                 <p className="absolute top-[45%] w-full text-center font-primary-cond text-sm font-light leading-4 text-white sm:text-xl sm:leading-5 md:text-2xl md:leading-6">
-                  We are working with experts and the community to build the
+                  We are working with the community to build the ultimate
                   <br />
-                  ultimate combat experience. If you think you&apos;ve got what
-                  it
+                  combat experience. If you think you&apos;ve got what it takes,
                   <br />
-                  takes, join our Test-Pilot Program for insider information and
+                  join our Test-Pilot Program for insider information and
                   <br />
                   early access.
                 </p>
