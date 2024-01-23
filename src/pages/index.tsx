@@ -19,6 +19,7 @@ import CookiesModal from "~/components/CookiesModal";
 import EmailModal from "~/components/EmailModal";
 import { EmailResponse } from "~/utils/playtest";
 import Footer from "~/components/Footer";
+import GladiatorCardsMobile from "~/components/GladiatorCardsMobile";
 
 export default function Home() {
   // Slides
@@ -31,6 +32,9 @@ export default function Home() {
   const slideNext = () => {
     if (activeIndex === -1) return setActiveIndex(1);
     setActiveIndex(activeIndex - 1);
+  };
+  const slideTo = (activeIndex: number) => {
+    setActiveIndex(activeIndex);
   };
 
   // Email
@@ -278,76 +282,18 @@ export default function Home() {
             />
           </div>
           <div className="relative lg:hidden">
-            <GladiatorGalleryMobile />
+            <GladiatorGalleryMobile
+              activeIndex={activeIndex}
+              setActiveIndex={slideTo}
+            />
           </div>
         </section>
         <div className="relative lg:hidden">
-          <div className="absolute w-full">
-            <div className="relative aspect-[393/241] w-full bg-mobile-card-background bg-contain bg-no-repeat">
-              <div className="absolute h-full w-full">
-                <Image
-                  className="ml-[9%] mt-[15%] w-[20%]"
-                  src={"/assets/svg/corporate-vector.svg"}
-                  alt="corporate-vector.svg"
-                  width={254}
-                  height={202}
-                  draggable={false}
-                  quality={100}
-                />
-                <h1 className="absolute left-[35%] top-[24%] font-owners-wide text-xl font-bold uppercase leading-4 text-green-primary sm:text-4xl sm:leading-8">
-                  VECTOR <br />
-                  CORP.
-                </h1>
-                <p className="absolute left-[35%] top-[42%] font-primary-cond text-xs font-light uppercase leading-3 text-white sm:text-xl sm:leading-5">
-                  Vector gladiators are built for pursuit <br /> and seizure,
-                  applying superior agility
-                  <br /> and tracking capabilities.
-                </p>
-              </div>
-            </div>
-            <div className="relative aspect-[393/241] w-full -translate-y-[35%] bg-mobile-card-background bg-contain bg-no-repeat">
-              <div className="absolute h-full w-full">
-                <Image
-                  className="ml-[9%] mt-[18%] w-[20%]"
-                  src={"/assets/svg/corporate-gunn.svg"}
-                  alt="corporate-gunn.svg"
-                  width={284}
-                  height={184}
-                  draggable={false}
-                  quality={100}
-                />
-                <h1 className="absolute left-[35%] top-[24%] font-owners-wide text-xl font-bold uppercase leading-4 text-green-primary sm:text-4xl sm:leading-8">
-                  GUNN <br />
-                  INDUSTRIES
-                </h1>
-                <p className="absolute left-[35%] top-[42%] font-primary-cond text-xs font-light uppercase leading-3 text-white sm:text-xl sm:leading-5">
-                  GUNN gladiators are built to withstand attacks
-                  <br /> and inflict maximum damage. They may not be as
-                  <br /> agile as others, but they can pack a punch.
-                </p>
-              </div>
-            </div>
-            <div className="relative aspect-[393/241] w-full -translate-y-[70%] bg-mobile-card-background bg-contain bg-no-repeat">
-              <div className="absolute h-full w-full">
-                <Image
-                  className="ml-[9%] mt-[18%] w-[20%]"
-                  src={"/assets/svg/corporate-shift.svg"}
-                  alt="corporate-shift.svg"
-                  width={326}
-                  height={196}
-                  draggable={false}
-                  quality={100}
-                />
-                <h1 className="absolute left-[35%] top-[24%] font-owners-wide text-xl font-bold uppercase leading-4 text-green-primary sm:text-4xl sm:leading-8">
-                  SHIFT
-                </h1>
-                <p className="absolute left-[35%] top-[38%] font-primary-cond text-xs font-light uppercase leading-3 text-white sm:text-xl sm:leading-5">
-                  Shift gladiators are built for support. capable <br /> of
-                  self-repair and protecting teammates.
-                </p>
-              </div>
-            </div>
-          </div>
+          <GladiatorCardsMobile
+            activeIndex={activeIndex}
+            setActiveIndex={setActiveIndex}
+          />
+
           <Image
             className="w-full"
             src={"/assets/png/mobile-corporate-background.png"}

@@ -11,6 +11,7 @@ const GladiatorCardsDesktop = ({
   const isDefenderActive = activeIndex === 1;
   const isStrikerActive = activeIndex === 0;
   const isRunnerActive = activeIndex === -1;
+
   return (
     <div className="absolute mx-auto flex w-full justify-between px-[5%] pt-[5%]">
       <div
@@ -41,17 +42,11 @@ const GladiatorCardsDesktop = ({
             elitist ways.
           </p>
         ) : (
-          <>
-            <h1 className="mt-[10%] text-center font-owners-wide text-2xl font-bold uppercase text-green-primary xl:text-3xl 2xl:mt-[12%] 2xl:text-4xl ">
-              GUNN <br />
-              INDUSTRIES
-            </h1>
-            <p className="mt-[3%] text-center font-primary-cond text-base font-light uppercase text-white xl:text-xl 2xl:text-2xl">
-              GUNN gladiators are built to <br /> withstand attacks and inflict
-              maximum <br /> damage. They may not be as agile as
-              <br /> others, but they can pack a punch.
-            </p>
-          </>
+          <p className="mt-[15%] text-center font-primary-cond text-base font-light uppercase text-white xl:text-xl 2xl:text-2xl">
+            GUNN gladiators are built to <br /> withstand attacks and inflict
+            maximum <br /> damage. They may not be as agile as
+            <br /> others, but they can pack a punch.
+          </p>
         )}
       </div>
       <div
@@ -81,17 +76,11 @@ const GladiatorCardsDesktop = ({
             administration of Plutus.
           </p>
         ) : (
-          <>
-            <h1 className="mt-[5%] text-center font-owners-wide text-2xl font-bold uppercase text-green-primary xl:text-3xl 2xl:mt-[7%] 2xl:text-4xl ">
-              VECTOR <br />
-              CORP.
-            </h1>
-            <div className="mt-[3%] text-center font-primary-cond text-base font-light uppercase text-white xl:text-xl 2xl:text-2xl">
-              Vector gladiators are built for pursuit <br /> and seizure,
-              applying superior agility
-              <br /> and tracking capabilities.
-            </div>
-          </>
+          <div className="mt-[13%] text-center font-primary-cond text-base font-light uppercase text-white xl:text-xl 2xl:text-2xl">
+            Vector gladiators are built for pursuit <br /> and seizure, applying
+            superior agility
+            <br /> and tracking capabilities.
+          </div>
         )}
       </div>
       <div
@@ -122,16 +111,11 @@ const GladiatorCardsDesktop = ({
             prosperity.
           </p>
         ) : (
-          <>
-            <h1 className="mt-[14%] text-center font-owners-wide text-2xl font-bold uppercase text-green-primary xl:text-3xl 2xl:mt-[15%] 2xl:text-4xl ">
-              SHIFT
-            </h1>
-            <p className="mt-[12%] text-center font-primary-cond text-base font-light uppercase text-white xl:text-xl 2xl:text-2xl">
-              Shift gladiators are built for <br /> support. capable of
-              self-repair <br />
-              and protecting teammates.
-            </p>
-          </>
+          <p className="mt-[21%] text-center font-primary-cond text-base font-light uppercase text-white xl:text-xl 2xl:text-2xl">
+            Shift gladiators are built for <br /> support. capable of
+            self-repair <br />
+            and protecting teammates.
+          </p>
         )}
       </div>
     </div>

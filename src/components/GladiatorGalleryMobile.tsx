@@ -4,16 +4,39 @@
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 /* eslint-disable @typescript-eslint/no-unsafe-argument */
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Swiper as SwiperReact, SwiperSlide } from "swiper/react";
 
 // import required modules
 import { Navigation, Pagination } from "swiper/modules";
 import type Swiper from "swiper";
 
-const GladiatorGalleryMobile = () => {
+const GladiatorGalleryMobile = ({
+  activeIndex,
+  setActiveIndex,
+}: {
+  activeIndex: number;
+  setActiveIndex: (activeIndex: number) => void;
+}) => {
   const [swiper, setSwiper] = useState<Swiper>();
-  const [activeIndex, setActiveIndex] = useState(1);
+
+  const mapSwiperIndexToActiveIndex = (swipereIndex: number) => {
+    if (swipereIndex === 0) return 1;
+    if (swipereIndex === 1) return 0;
+    return -1;
+  };
+  const mapActiveIndexToSwiperIndex = (activeIndex: number) => {
+    if (activeIndex === 1) return 0;
+    if (activeIndex === 0) return 1;
+    return 2;
+  };
+
+  useEffect(() => {
+    if (swiper) {
+      swiper.slideTo(mapActiveIndexToSwiperIndex(activeIndex));
+    }
+    return () => {};
+  }, [activeIndex]);
 
   return (
     <div className="relative">
@@ -52,7 +75,7 @@ const GladiatorGalleryMobile = () => {
         <SwiperReact
           onSwiper={(swiper) => setSwiper(swiper)}
           onSlideChange={(swiper) => {
-            setActiveIndex(swiper.realIndex);
+            setActiveIndex(mapSwiperIndexToActiveIndex(swiper.realIndex));
           }}
           className="h-full"
           centeredSlides={true}
@@ -63,7 +86,7 @@ const GladiatorGalleryMobile = () => {
         >
           <SwiperSlide>
             <Image
-              className={`w-full ${activeIndex === 0 ? "" : "grayscale"}`}
+              className={`w-full ${activeIndex === 1 ? "" : "grayscale"}`}
               src={"/assets/png/robot-DEFENDER.png"}
               alt="DEFENDER.png"
               width={1907}
@@ -74,7 +97,7 @@ const GladiatorGalleryMobile = () => {
           </SwiperSlide>
           <SwiperSlide>
             <Image
-              className={`w-full ${activeIndex === 1 ? "" : "grayscale"}`}
+              className={`w-full ${activeIndex === 0 ? "" : "grayscale"}`}
               src={"/assets/png/robot-STRIKER.png"}
               alt="STRIKER.png"
               width={1907}
@@ -85,7 +108,7 @@ const GladiatorGalleryMobile = () => {
           </SwiperSlide>
           <SwiperSlide>
             <Image
-              className={`w-full ${activeIndex === 2 ? "" : "grayscale"}`}
+              className={`w-full ${activeIndex === -1 ? "" : "grayscale"}`}
               src={"/assets/png/robot-RUNNER.png"}
               alt="RUNNER.png"
               width={1907}
