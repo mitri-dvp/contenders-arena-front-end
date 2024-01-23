@@ -24,6 +24,7 @@ import GladiatorCardsMobile from "~/components/GladiatorCardsMobile";
 export default function Home() {
   // Slides
   const [activeIndex, setActiveIndex] = useState(0);
+  const [touches, setTouches] = useState(0);
 
   const slidePrev = () => {
     if (activeIndex === 1) return setActiveIndex(-1);
@@ -35,6 +36,10 @@ export default function Home() {
   };
   const slideTo = (activeIndex: number) => {
     setActiveIndex(activeIndex);
+  };
+
+  const addToTouches = () => {
+    setTouches(touches + 1);
   };
 
   // Email
@@ -285,6 +290,7 @@ export default function Home() {
             <GladiatorGalleryMobile
               activeIndex={activeIndex}
               setActiveIndex={slideTo}
+              touches={touches}
             />
           </div>
         </section>
@@ -292,6 +298,7 @@ export default function Home() {
           <GladiatorCardsMobile
             activeIndex={activeIndex}
             setActiveIndex={setActiveIndex}
+            addToTouches={addToTouches}
           />
 
           <Image

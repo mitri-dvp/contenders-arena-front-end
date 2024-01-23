@@ -14,28 +14,28 @@ import type Swiper from "swiper";
 const GladiatorGalleryMobile = ({
   activeIndex,
   setActiveIndex,
+  touches,
 }: {
   activeIndex: number;
   setActiveIndex: (activeIndex: number) => void;
+  touches: number;
 }) => {
   const [swiper, setSwiper] = useState<Swiper>();
 
   const mapSwiperIndexToActiveIndex = (swipereIndex: number) => {
-    if (swipereIndex === 0) return 1;
-    if (swipereIndex === 1) return 0;
+    if (swipereIndex === 0) return 0;
+    if (swipereIndex === 1) return 1;
     return -1;
   };
   const mapActiveIndexToSwiperIndex = (activeIndex: number) => {
-    if (activeIndex === 1) return 0;
-    if (activeIndex === 0) return 1;
+    if (activeIndex === 1) return 1;
+    if (activeIndex === 0) return 0;
     return 2;
   };
 
   useEffect(() => {
-    if (swiper) {
-      swiper.slideTo(mapActiveIndexToSwiperIndex(activeIndex));
-    }
-  }, [activeIndex]);
+    if (swiper) swiper.emit("update");
+  }, [touches]);
 
   return (
     <div className="relative">
@@ -76,18 +76,23 @@ const GladiatorGalleryMobile = ({
           onSlideChange={(swiper) => {
             setActiveIndex(mapSwiperIndexToActiveIndex(swiper.realIndex));
           }}
+          onUpdate={(swiper) => {
+            console.log("UPDATED");
+            console.log(mapActiveIndexToSwiperIndex(activeIndex));
+            swiper.slideToLoop(mapActiveIndexToSwiperIndex(activeIndex));
+          }}
           className="h-full"
           centeredSlides={true}
           slidesPerView={1}
-          initialSlide={1}
+          initialSlide={0}
           pagination={true}
           loop={true}
         >
           <SwiperSlide>
             <Image
-              className={`w-full ${activeIndex === 1 ? "" : "grayscale"}`}
-              src={"/assets/png/robot-DEFENDER.png"}
-              alt="DEFENDER.png"
+              className={`w-full ${activeIndex === 0 ? "" : "grayscale"}`}
+              src={"/assets/png/robot-STRIKER.png"}
+              alt="STRIKER.png"
               width={1907}
               height={1003}
               draggable={false}
@@ -96,9 +101,9 @@ const GladiatorGalleryMobile = ({
           </SwiperSlide>
           <SwiperSlide>
             <Image
-              className={`w-full ${activeIndex === 0 ? "" : "grayscale"}`}
-              src={"/assets/png/robot-STRIKER.png"}
-              alt="STRIKER.png"
+              className={`w-full ${activeIndex === 1 ? "" : "grayscale"}`}
+              src={"/assets/png/robot-DEFENDER.png"}
+              alt="DEFENDER.png"
               width={1907}
               height={1003}
               draggable={false}

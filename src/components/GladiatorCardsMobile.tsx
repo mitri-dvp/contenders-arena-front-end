@@ -4,9 +4,11 @@ import React, { useState } from "react";
 const GladiatorCardsMobile = ({
   activeIndex,
   setActiveIndex,
+  addToTouches,
 }: {
   activeIndex: number;
   setActiveIndex: (index: number) => void;
+  addToTouches: () => void;
 }) => {
   const isDefenderActive = activeIndex === 1;
   const isStrikerActive = activeIndex === 0;
@@ -16,7 +18,10 @@ const GladiatorCardsMobile = ({
     <div className="absolute w-full">
       <div
         className="relative aspect-[393/241] w-full bg-mobile-card-background bg-contain bg-no-repeat"
-        onClick={() => setActiveIndex(0)}
+        onClick={() => {
+          addToTouches();
+          setActiveIndex(0);
+        }}
       >
         <div className="absolute h-full w-full">
           <Image
@@ -52,7 +57,10 @@ const GladiatorCardsMobile = ({
       </div>
       <div
         className="relative aspect-[393/241] w-full -translate-y-[35%] bg-mobile-card-background bg-contain bg-no-repeat"
-        onClick={() => setActiveIndex(1)}
+        onClick={() => {
+          addToTouches();
+          setActiveIndex(1);
+        }}
       >
         <div className="absolute h-full w-full">
           <Image
@@ -89,7 +97,10 @@ const GladiatorCardsMobile = ({
       </div>
       <div
         className="relative aspect-[393/241] w-full -translate-y-[70%] bg-mobile-card-background bg-contain bg-no-repeat"
-        onClick={() => setActiveIndex(-1)}
+        onClick={() => {
+          addToTouches();
+          setActiveIndex(-1);
+        }}
       >
         <div className="absolute h-full w-full">
           <Image
