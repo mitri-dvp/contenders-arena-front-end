@@ -71,7 +71,7 @@ export default function Home() {
               quality={100}
             />
             <Image
-              className="absolute top-0 z-10 w-full select-none object-contain"
+              className="absolute top-0 z-0 w-full select-none object-contain"
               src={"/assets/png/contenders_hero_robot_2.png"}
               alt="contenders_hero_robot_2.png"
               width={1920}
