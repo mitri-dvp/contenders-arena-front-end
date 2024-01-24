@@ -10,6 +10,7 @@ import CookiesModal from "~/components/CookiesModal";
 import EmailModal from "~/components/EmailModal";
 import { EmailResponse } from "~/utils/playtest";
 import Footer from "~/components/Footer";
+import ScrollToTop from "~/components/ScrollToTop";
 
 export default function TermsAndConditions() {
   // Slides
@@ -42,6 +43,7 @@ export default function TermsAndConditions() {
         <DesktopNav />
         <MobileNav />
       </header>
+      <ScrollToTop />
       <main className="min-h-screen w-[100vw] overflow-hidden bg-dark-primary">
         <section>
           <div className="mx-auto w-full max-w-[1472px] justify-between px-[10%] pt-48 text-green-primary">

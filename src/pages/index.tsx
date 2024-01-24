@@ -20,6 +20,7 @@ import EmailModal from "~/components/EmailModal";
 import { EmailResponse } from "~/utils/playtest";
 import Footer from "~/components/Footer";
 import GladiatorCardsMobile from "~/components/GladiatorCardsMobile";
+import ScrollToTop from "~/components/ScrollToTop";
 
 export default function Home() {
   // Slides
@@ -67,6 +68,7 @@ export default function Home() {
         <DesktopNav />
         <MobileNav />
       </header>
+      <ScrollToTop />
       <main className="min-h-screen w-[100vw] overflow-hidden">
         <section className="w-full">
           <div className="relative hidden lg:block">

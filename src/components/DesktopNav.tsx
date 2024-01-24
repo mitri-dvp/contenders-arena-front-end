@@ -17,10 +17,22 @@ const DesktopNav = () => {
         />
       </Link>
 
-      <ul className="flex items-center gap-4 font-primary text-lg font-light uppercase text-white xl:text-xl 2xl:gap-8">
-        <Link href={isHome ? "#video" : "/#video"}>Gameplay</Link>
-        <Link href={isHome ? "#community" : "/#community"}>Community</Link>
-        <Link href={isHome ? "#striker" : "/#striker"}>More</Link>
+      <ul className="flex items-center gap-4 font-primary text-lg uppercase text-white xl:text-xl 2xl:gap-8">
+        <Link className="hover:underline" href={isHome ? "#video" : "/#video"}>
+          Gameplay
+        </Link>
+        <Link
+          className="hover:underline"
+          href={isHome ? "#community" : "/#community"}
+        >
+          Community
+        </Link>
+        <Link
+          className="hover:underline"
+          href={isHome ? "#striker" : "/#striker"}
+        >
+          More
+        </Link>
         <Link
           href={"https://store.steampowered.com/app/2445510/Contenders_Arena/"}
           className="flex h-14 items-center bg-button bg-contain bg-center bg-no-repeat px-12 font-primary-cond font-semibold text-black xl:px-16 xl:text-2xl"

@@ -13,22 +13,13 @@ const Footer = ({ className }: { className: string }) => {
         />
         <div className="relative flex w-1/2 justify-between gap-4 md:w-[27%] md:gap-2">
           <div>
-            <div className="font-primary text-xs text-green-primary md:text-sm">
+            <div className="font-primary text-xs uppercase text-green-primary md:text-sm">
               From:
             </div>
             <Image
               className="w-[200px] md:w-[150px]"
               src={"/assets/svg/gamecan-logo.svg"}
               alt="gamecan-logo.svg"
-              width={300}
-              height={100}
-            />
-          </div>
-          <div>
-            <Image
-              className="mt-2.5 w-[100px] md:mt-[15%] md:w-[75px]"
-              src={"/assets/png/gamecan-rating.png"}
-              alt="gamecan-rating.png"
               width={300}
               height={100}
             />

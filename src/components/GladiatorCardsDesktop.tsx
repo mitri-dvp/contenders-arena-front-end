@@ -19,7 +19,7 @@ const GladiatorCardsDesktop = ({
         className="relative z-10 aspect-[619/819] w-full cursor-pointer bg-corporate-gunn bg-cover"
       >
         <Image
-          className="mx-auto mt-[20%] w-[40%] 2xl:mt-[25%]"
+          className="mx-auto mt-[20%] h-[25%] w-auto 2xl:mt-[25%]"
           src={
             isDefenderActive
               ? "/assets/svg/corporate-gunn-active.svg"
@@ -32,7 +32,7 @@ const GladiatorCardsDesktop = ({
           quality={100}
         />
         {isDefenderActive ? (
-          <p className="mt-[9%] px-10 text-center font-primary-cond text-sm font-light uppercase text-white xl:px-16 xl:text-xl 2xl:text-xl">
+          <p className="mt-[9%] px-[14%] text-center font-primary-cond text-xs font-light uppercase text-white xl:text-sm 2xl:text-base">
             Originating from a coalition of mercenary groups, it has grown into
             a fiercely independent entity with significant military and economic
             prowess. Its chief aim is to forge a self-reliant and powerful
@@ -42,10 +42,10 @@ const GladiatorCardsDesktop = ({
             elitist ways.
           </p>
         ) : (
-          <p className="mt-[15%] text-center font-primary-cond text-base font-light uppercase text-white xl:text-xl 2xl:text-2xl">
-            GUNN gladiators are built to <br /> withstand attacks and inflict
-            maximum <br /> damage. They may not be as agile as
-            <br /> others, but they can pack a punch.
+          <p className="mt-[9%] px-[14%] text-center font-primary-cond text-base font-light uppercase text-white xl:text-xl 2xl:text-2xl">
+            GUNN is a military-industrial
+            <br /> megacorporation that places a high <br />
+            value on brotherhood, loyalty, <br /> and firepower.
           </p>
         )}
       </div>
@@ -54,7 +54,7 @@ const GladiatorCardsDesktop = ({
         className="relative z-10 aspect-[619/819] w-full cursor-pointer bg-corporate-vector bg-cover"
       >
         <Image
-          className="mx-auto mt-[20%] w-[40%] 2xl:mt-[25%]"
+          className="mx-auto mt-[20%] h-[25%] w-auto 2xl:mt-[25%]"
           src={
             isStrikerActive
               ? "/assets/svg/corporate-vector-active.svg"
@@ -67,7 +67,7 @@ const GladiatorCardsDesktop = ({
           quality={100}
         />
         {isStrikerActive ? (
-          <p className="mt-[9%] px-10 text-center font-primary-cond text-sm font-light uppercase text-white xl:px-16 xl:text-xl 2xl:text-xl">
+          <p className="mt-[9%] px-[14%] text-center font-primary-cond text-xs font-light uppercase text-white xl:text-sm 2xl:text-base">
             With a focus on security, law, and order, Vector aims to impose
             stability on society, even if it comes at the cost of individual
             freedoms. They have an intense dislike for Axiom, seeing their
@@ -76,11 +76,11 @@ const GladiatorCardsDesktop = ({
             administration of Plutus.
           </p>
         ) : (
-          <div className="mt-[13%] text-center font-primary-cond text-base font-light uppercase text-white xl:text-xl 2xl:text-2xl">
-            Vector gladiators are built for pursuit <br /> and seizure, applying
-            superior agility
-            <br /> and tracking capabilities.
-          </div>
+          <p className="mt-[9%] px-[14%] text-center font-primary-cond text-base font-light uppercase text-white xl:text-xl 2xl:text-2xl">
+            Vector is the oldest and most <br /> widespread megacorporation in
+            <br />
+            human space.
+          </p>
         )}
       </div>
       <div
@@ -88,7 +88,7 @@ const GladiatorCardsDesktop = ({
         className="relative z-10 aspect-[619/819] w-full cursor-pointer bg-corporate-shift bg-cover"
       >
         <Image
-          className="mx-auto mt-[20%] w-[40%] 2xl:mt-[25%]"
+          className="mx-auto mt-[20%] h-[25%] w-auto 2xl:mt-[25%]"
           src={
             isRunnerActive
               ? "/assets/svg/corporate-shift-active.svg"
@@ -101,7 +101,7 @@ const GladiatorCardsDesktop = ({
           quality={100}
         />
         {isRunnerActive ? (
-          <p className="mt-[9%] px-10 text-center font-primary-cond text-sm font-light uppercase text-white xl:px-16 xl:text-xl 2xl:text-xl">
+          <p className="mt-[9%] px-[14%] text-center font-primary-cond text-xs font-light uppercase text-white xl:text-sm 2xl:text-base">
             Formerly known as Teradev Technology Amalgamated, Shift transformed
             its operations to emphasize societal betterment. Headquartered on
             Brontes, Shift is a leading model of corporate responsibility,
@@ -111,10 +111,10 @@ const GladiatorCardsDesktop = ({
             prosperity.
           </p>
         ) : (
-          <p className="mt-[21%] text-center font-primary-cond text-base font-light uppercase text-white xl:text-xl 2xl:text-2xl">
-            Shift gladiators are built for <br /> support. capable of
-            self-repair <br />
-            and protecting teammates.
+          <p className="mt-[9%] px-[14%] text-center font-primary-cond text-base font-light uppercase text-white  xl:text-xl 2xl:text-2xl">
+            Shift is a rebranded private <br /> corporation focused on ethical
+            <br />
+            technology and community welfare.
           </p>
         )}
       </div>
