@@ -353,7 +353,7 @@ export default function Home() {
             <div>
               <Image
                 className="w-full"
-                src={"/assets/png/mobile-discord-robots.png"}
+                src={"/assets/png/mobile-discord-section.png"}
                 alt="mobile-discord-robots.png"
                 width={393}
                 height={296}

@@ -136,7 +136,11 @@ const GladiatorGalleryDesktop = ({
             className={`w-full transition-all ${
               getDefenderStyles().imageStyles
             }`}
-            src={"/assets/png/robot-DEFENDER.png"}
+            src={
+              activeIndex === 1
+                ? "/assets/png/robot-DEFENDER-front.png"
+                : "/assets/png/robot-DEFENDER.png"
+            }
             alt="DEFENDER.png"
             width={1907}
             height={1003}
@@ -154,7 +158,11 @@ const GladiatorGalleryDesktop = ({
             className={`w-full transition-all ${
               getStrikerStyles().imageStyles
             }`}
-            src={"/assets/png/robot-STRIKER.png"}
+            src={
+              activeIndex === 0
+                ? "/assets/png/robot-STRIKER-front.png"
+                : "/assets/png/robot-STRIKER.png"
+            }
             alt="STRIKER.png"
             width={1907}
             height={1003}
@@ -170,7 +178,11 @@ const GladiatorGalleryDesktop = ({
         >
           <Image
             className={`w-full transition-all ${getRunnerStyles().imageStyles}`}
-            src={"/assets/png/robot-RUNNER.png"}
+            src={
+              activeIndex === -1
+                ? "/assets/png/robot-RUNNER-front.png"
+                : "/assets/png/robot-RUNNER.png"
+            }
             alt="RUNNER.png"
             width={1907}
             height={1003}
