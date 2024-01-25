@@ -75,7 +75,6 @@ const MobileNav = () => {
             More
           </Link>
           <Link
-            onClick={() => setOpen(false)}
             href={
               "https://store.steampowered.com/app/2445510/Contenders_Arena/"
             }

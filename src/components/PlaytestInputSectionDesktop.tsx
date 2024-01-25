@@ -37,7 +37,7 @@ const PlaytestInputSectionDesktop = ({
           placeholder="EMAIL ADDRESS"
         />
       </div>
-      <button className="flex w-full translate-y-[5%] scale-[1.075] items-center justify-center bg-button bg-contain bg-no-repeat font-primary-cond text-xl font-semibold uppercase text-black 2xl:text-2xl">
+      <button className="flex w-full translate-y-[5%] scale-[1.075] items-center justify-center bg-button bg-contain bg-no-repeat font-primary-cond text-xl font-semibold uppercase text-black transition hover:opacity-75 2xl:text-2xl">
         <span className="-translate-y-[8%]">
           {loading ? (
             <LoadingSpinner className="h-6 w-6 animate-spin fill-dark-primary text-white xl:h-8 xl:w-8" />

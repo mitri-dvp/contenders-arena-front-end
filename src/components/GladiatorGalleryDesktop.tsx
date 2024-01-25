@@ -69,7 +69,7 @@ const GladiatorGalleryDesktop = ({
       />
       <div className="absolute top-0 h-full w-full">
         <Image
-          className="absolute left-[15%] top-1/2 z-10 w-[80px] -translate-y-1/2 cursor-pointer"
+          className="absolute left-[15%] top-1/2 z-10 w-[80px] -translate-y-1/2 cursor-pointer transition hover:opacity-50"
           onClick={() => slidePrev()}
           src={"/assets/svg/arrow-left.svg"}
           alt="arrow-left.svg"
@@ -79,7 +79,7 @@ const GladiatorGalleryDesktop = ({
           quality={100}
         />
         <Image
-          className="absolute right-[15%] top-1/2 z-10 w-[80px] -translate-y-1/2 cursor-pointer"
+          className="absolute right-[15%] top-1/2 z-10 w-[80px] -translate-y-1/2 cursor-pointer transition hover:opacity-50"
           onClick={() => slideNext()}
           src={"/assets/svg/arrow-right.svg"}
           alt="arrow-right.svg"

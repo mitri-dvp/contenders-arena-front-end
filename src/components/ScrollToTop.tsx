@@ -12,7 +12,7 @@ const ScrollToTop = () => {
       href={"#"}
       className={`${
         isAtTopOfPage ? "-z-10 opacity-0" : "opacity-100"
-      } fixed bottom-8 right-8 z-50 hidden aspect-square rounded-full bg-green-primary p-4 transition-opacity lg:block`}
+      } fixed bottom-8 right-8 z-50 hidden aspect-square rounded-full bg-green-primary p-4 transition-opacity hover:opacity-75  lg:block`}
     >
       <Image
         className="w-8"

@@ -102,7 +102,7 @@ export default function Home() {
                 <br />
                 <Link href={"#video"}>
                   <Image
-                    className="absolute bottom-0 translate-y-[60px] xl:translate-y-[70px] 3xl:translate-y-[88px]"
+                    className="absolute bottom-0 translate-y-[60px] transition hover:opacity-50 xl:translate-y-[70px] 3xl:translate-y-[88px]"
                     src={"/assets/svg/chevron-down.svg"}
                     alt="chevron-down.svg"
                     width={50}
@@ -229,7 +229,7 @@ export default function Home() {
                   href={
                     "https://store.steampowered.com/app/2445510/Contenders_Arena/"
                   }
-                  className="flex h-16 w-max items-center bg-button-steam bg-contain bg-center bg-no-repeat pl-4 pr-36 font-primary-cond text-xl font-light uppercase tracking-tight text-white"
+                  className="flex h-16 w-max items-center bg-button-steam bg-contain bg-center bg-no-repeat pl-4 pr-36 font-primary-cond text-xl font-light uppercase tracking-tight text-white transition hover:opacity-75"
                 >
                   coming soon to
                 </Link>
@@ -237,7 +237,7 @@ export default function Home() {
                   href={
                     "https://store.steampowered.com/app/2445510/Contenders_Arena/"
                   }
-                  className="flex h-16 items-center bg-button bg-contain bg-center bg-no-repeat px-12 font-primary-cond text-xl font-semibold uppercase text-black"
+                  className="flex h-16 items-center bg-button bg-contain bg-center bg-no-repeat px-12 font-primary-cond text-xl font-semibold uppercase text-black transition hover:opacity-75"
                 >
                   Wishlist Now!
                 </Link>
@@ -332,7 +332,7 @@ export default function Home() {
               <div className="mt-[1%] flex gap-[2%] 2xl:mt-[1.5%] 3xl:mt-[3%]">
                 <Link
                   href={"https://discord.com/invite/contenders"}
-                  className="flex h-16 w-max items-center bg-button-discord bg-contain bg-center bg-no-repeat pl-20 pr-8 font-primary-cond text-xl font-bold uppercase tracking-tight text-green-primary"
+                  className="flex h-16 w-max items-center bg-button-discord bg-contain bg-center bg-no-repeat pl-20 pr-8 font-primary-cond text-xl font-bold uppercase tracking-tight text-green-primary transition hover:opacity-75"
                 >
                   Join Discord Community
                 </Link>
