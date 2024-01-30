@@ -116,8 +116,8 @@ export default function Home() {
             <div className="absolute bottom-[6%] right-0 z-10 w-full">
               <Image
                 className="absolute bottom-[6%] right-[3.75%] aspect-[987/277] w-[51%]"
-                src={"/assets/png/hero-decoration-email.png"}
-                alt="hero-decoration-email.png"
+                src={"/assets/png/hero-decoration-email-base.png"}
+                alt="hero-decoration-email-base.png"
                 width={987}
                 height={277}
                 draggable={false}

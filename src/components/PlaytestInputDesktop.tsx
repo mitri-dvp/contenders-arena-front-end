@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { validateEmail } from "~/utils/email";
 import { EmailResponse, joinPlaytest } from "~/utils/playtest";
 import LoadingSpinner from "./LoadingSpinner";
+import Image from "next/image";
 
 const PlaytestInputDesktop = ({
   setEmailReponse,
@@ -37,13 +38,24 @@ const PlaytestInputDesktop = ({
       />
       <button
         typeof="submit"
-        className="absolute left-[43.3%] top-[2%] flex h-[28%] w-[37%] items-center justify-center bg-transparent font-primary-cond text-xl font-semibold uppercase text-black 2xl:text-2xl"
+        className="absolute left-[43.3%] top-[2%] flex h-[28%] w-[37%] items-center justify-center bg-transparent font-primary-cond text-xl font-semibold uppercase text-black transition hover:opacity-75 2xl:text-2xl"
       >
-        {loading ? (
-          <LoadingSpinner className="h-5 w-5 animate-spin fill-dark-primary text-white xl:h-8 xl:w-8" />
-        ) : (
-          "Join"
-        )}
+        <Image
+          className="absolute right-[-1px] top-[0%] aspect-[367/76] w-[100.25%] max-w-none"
+          src={"/assets/png/hero-decoration-email-button-background.png"}
+          alt="hero-decoration-email-button-background.png"
+          width={367}
+          height={76}
+          draggable={false}
+          quality={100}
+        />
+        <div className="z-10">
+          {loading ? (
+            <LoadingSpinner className="h-5 w-5 animate-spin fill-dark-primary text-white xl:h-8 xl:w-8" />
+          ) : (
+            "Join"
+          )}
+        </div>
       </button>
     </form>
   );
