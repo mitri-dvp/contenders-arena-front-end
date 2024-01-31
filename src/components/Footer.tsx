@@ -99,7 +99,7 @@ const Footer = ({ className }: { className: string }) => {
           </ul>
         </div>
         <div className="w-max text-center font-light text-green-primary md:text-right">
-          &copy; 2023 Galaxy Racer. All Rights Reserved
+          &copy; {new Date().getFullYear()} Galaxy Racer. All Rights Reserved
         </div>
       </div>
     </footer>
