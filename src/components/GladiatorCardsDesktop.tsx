@@ -43,9 +43,8 @@ const GladiatorCardsDesktop = ({
           </p>
         ) : (
           <p className="mt-[9%] px-[14%] text-center font-primary-cond text-base font-light uppercase text-white xl:text-xl 2xl:text-2xl">
-            GUNN is a military-industrial
-            <br /> megacorporation that places a high <br />
-            value on brotherhood, loyalty, <br /> and firepower.
+            GUNN is a bastion of brotherhood and firepower, carving out their
+            future from the unforgiving fires of Neo Charon.
           </p>
         )}
       </div>
@@ -77,9 +76,8 @@ const GladiatorCardsDesktop = ({
           </p>
         ) : (
           <p className="mt-[9%] px-[14%] text-center font-primary-cond text-base font-light uppercase text-white xl:text-xl 2xl:text-2xl">
-            Vector is the oldest and most <br /> widespread megacorporation in
-            <br />
-            human space.
+            Vector stands as the vanguard of civilization, wielding authority
+            and technology to maintain order across the cosmos.
           </p>
         )}
       </div>
@@ -112,9 +110,8 @@ const GladiatorCardsDesktop = ({
           </p>
         ) : (
           <p className="mt-[9%] px-[14%] text-center font-primary-cond text-base font-light uppercase text-white  xl:text-xl 2xl:text-2xl">
-            Shift is a rebranded private <br /> corporation focused on ethical
-            <br />
-            technology and community welfare.
+            Shift embodies a journey from shadow to light, beneath the storms of
+            Brontes they plot a future of peace and progress.
           </p>
         )}
       </div>

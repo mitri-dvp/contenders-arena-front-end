@@ -48,10 +48,9 @@ const GladiatorCardsMobile = ({
                 administration of Plutus.
               </p>
             ) : (
-              <p className="absolute left-[35%] top-1/2 -translate-y-1/2 font-primary-cond text-xs font-light uppercase leading-3 text-white sm:text-xl sm:leading-5">
-                Vector gladiators are built for pursuit <br /> and seizure,
-                applying superior agility
-                <br /> and tracking capabilities.
+              <p className="absolute left-[35%] top-1/2 max-w-[200px] -translate-y-1/2 font-primary-cond text-xs font-light uppercase leading-3 text-white sm:max-w-[380px] sm:text-xl sm:leading-5">
+                Vector stands as the vanguard of civilization, wielding
+                authority and technology to maintain order across the cosmos.
               </p>
             )}
           </div>
@@ -90,10 +89,9 @@ const GladiatorCardsMobile = ({
                 despising their elitist ways.
               </p>
             ) : (
-              <p className="absolute left-[35%] top-1/2 -translate-y-1/2 font-primary-cond text-xs font-light uppercase leading-3 text-white sm:text-xl sm:leading-5">
-                GUNN gladiators are built to withstand attacks
-                <br /> and inflict maximum damage. They may not be as
-                <br /> agile as others, but they can pack a punch.
+              <p className="absolute left-[35%] top-1/2 max-w-[200px] -translate-y-1/2 font-primary-cond text-xs font-light uppercase leading-3 text-white sm:max-w-[380px] sm:text-xl sm:leading-5">
+                GUNN is a bastion of brotherhood and firepower, carving out
+                their future from the unforgiving fires of Neo Charon.
               </p>
             )}
           </div>
@@ -132,9 +130,9 @@ const GladiatorCardsMobile = ({
                 peace, fairness, and prosperity.
               </p>
             ) : (
-              <p className="absolute left-[35%] top-1/2 -translate-y-1/2 font-primary-cond text-xs font-light uppercase leading-3 text-white sm:text-xl sm:leading-5">
-                Shift gladiators are built for support. capable <br /> of
-                self-repair and protecting teammates.
+              <p className="absolute left-[35%] top-1/2 max-w-[200px] -translate-y-1/2 font-primary-cond text-xs font-light uppercase leading-3 text-white sm:max-w-[380px] sm:text-xl sm:leading-5">
+                Shift embodies a journey from shadow to light, beneath the
+                storms of Brontes they plot a future of peace and progress.
               </p>
             )}
           </div>

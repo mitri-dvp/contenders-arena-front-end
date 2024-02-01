@@ -98,8 +98,15 @@ const Footer = ({ className }: { className: string }) => {
             </Link>
           </ul>
         </div>
-        <div className="w-max text-center font-light text-green-primary md:text-right">
-          &copy; {new Date().getFullYear()} Galaxy Racer. All Rights Reserved
+      </div>
+      <div className="mx-auto flex w-full max-w-[1472px] flex-col items-center justify-between gap-10 px-[10%] font-primary text-xs uppercase text-zinc-300 md:flex-row md:justify-between md:gap-2 xl:text-sm 2xl:gap-8 2xl:text-sm">
+        <div className=" text-center text-xs font-light text-green-primary ">
+          Developed by Gamecan OÜ. Published by Contenders Universe DMCC. <br />
+          Contenders: Arena Copyright &copy; Gamecan OÜ 2016-2024. All rights
+          reserved. <br /> &copy; 2024 Valve Corporation. Steam and Steam logo
+          are trademarks or registered trademarks of Valve Corporation in the
+          U.S and elsewhere. All rights reserved. Footage captured on PC. Not
+          all images appear in-game.
         </div>
       </div>
     </footer>
