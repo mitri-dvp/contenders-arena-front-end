@@ -21,6 +21,7 @@ import { EmailResponse } from "~/utils/playtest";
 import Footer from "~/components/Footer";
 import GladiatorCardsMobile from "~/components/GladiatorCardsMobile";
 import ScrollToTop from "~/components/ScrollToTop";
+import Seo from "~/components/Seo";
 
 export default function Home() {
   // Slides
@@ -52,18 +53,10 @@ export default function Home() {
 
   return (
     <>
-      <Head>
-        <title>Contenders Arena</title>
-        <meta
-          name="description"
-          content="Contenders: Arena is an exhilarating 3v3 shooter that takes you into a world of fast-paced action, strategic gameplay, and thrilling competition. Become the skilled pilot of a new kind of gladiator and prepare to engage in intense battles unlike anything you've experienced before!"
-        />
-        <meta
-          name="keywords"
-          content="contenders, contenders arena, Gamecan, galaxy racer, contenders steam, contenders arena steam, contenders arena beta, contenders steam nextfest"
-        />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      <Seo
+        title="Contenders Arena"
+        description="Contenders: Arena is an exhilarating 3v3 shooter that takes you into a world of fast-paced action, strategic gameplay, and thrilling competition. Become the skilled pilot of a new kind of gladiator and prepare to engage in intense battles unlike anything you've experienced before!"
+      />
       <header className="absolute z-20 w-full">
         <DesktopNav />
         <MobileNav />

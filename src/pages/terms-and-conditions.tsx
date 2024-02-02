@@ -11,6 +11,7 @@ import EmailModal from "~/components/EmailModal";
 import { EmailResponse } from "~/utils/playtest";
 import Footer from "~/components/Footer";
 import ScrollToTop from "~/components/ScrollToTop";
+import Seo from "~/components/Seo";
 
 export default function TermsAndConditions() {
   // Slides
@@ -34,14 +35,10 @@ export default function TermsAndConditions() {
 
   return (
     <>
-      <Head>
-        <title>Contenders Arena | Terms & Conditions</title>
-        <meta
-          name="description"
-          content="Contenders Arena Terms & Conditions"
-        />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      <Seo
+        title="Contenders Arena | Terms & Conditions"
+        description="Contenders Arena Terms & Conditions"
+      />
       <header className="absolute z-20 w-full">
         <DesktopNav />
         <MobileNav />
